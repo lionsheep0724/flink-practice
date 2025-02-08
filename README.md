@@ -1,2 +1,0 @@
-# flink-practice
-flink-practice

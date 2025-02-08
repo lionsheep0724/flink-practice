@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.2'  // 원하는 Spring Boot 버전
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.flink-practice'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // 스프링 웹플럭스 (논블로킹 서버)
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // 로깅 (기본적으로 spring-boot-starter-logging 포함)
+    // 필요 시 추가 의존성
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
