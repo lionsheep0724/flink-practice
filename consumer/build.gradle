@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.1.2'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.consumer'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+    // Apache Flink 릴리즈 아티팩트를 찾기 위한 추가 리포지토리
+    maven { url "https://repository.apache.org/content/repositories/releases/" }
+}
+
+dependencies {
+    // Spring WebFlux
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // Spring Kafka
+    implementation 'org.springframework.kafka:spring-kafka'
+
+    // Apache Flink Streaming API (Scala:Flink)
+    implementation group: 'org.apache.flink', name: 'flink-streaming-java_2.12', version: '1.14.6'
+
+    // Apache Flink Kafka Connector (Scala:Flink)
+    implementation group: 'org.apache.flink', name: 'flink-connector-kafka_2.12', version: '1.14.6'
+
+    // Apache Flink Core (KeyedDeserializationSchema 등 포함)
+    implementation 'org.apache.flink:flink-core:1.14.6'
+
+    // ONNX Runtime
+    implementation 'com.microsoft.onnxruntime:onnxruntime:1.16.0-rc1'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
+
+bootJar {
+    enabled = false
+}
