@@ -12,6 +12,7 @@ import reactor.core.publisher.Flux;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.UUID;
 
 @RestController
 public class AudioController {
@@ -29,6 +30,11 @@ public class AudioController {
       consumes = MediaType.APPLICATION_OCTET_STREAM_VALUE
   )
   public Mono<String> consumeAudio(ServerHttpRequest request) {
+
+    // 새로운 요청마다 고유한 sessionId를 발급
+    String sessionId = UUID.randomUUID().toString();
+    System.out.println("Issued sessionId: " + sessionId);
+
     // 각 HTTP 요청마다 누적 버퍼를 생성 (Python의 bytearray와 유사)
     ByteArrayOutputStream accumulator = new ByteArrayOutputStream();
 
@@ -50,9 +56,10 @@ public class AudioController {
               // 첫 5120바이트를 추출
               byte[] chunkToPublish = Arrays.copyOfRange(fullBuffer, 0, 5120);
 
-              // Kafka에 메시지 전송 (예: "audio-topic" 토픽에 전송)
-              kafkaTemplate.send("audio-packet-topic", chunkToPublish);
-              System.out.println("Published a Kafka message with 5120 bytes.");
+              // Kafka에 메시지 전송 (토픽: "audio-packet-topic", key: sessionId, value: chunkToPublish)
+              kafkaTemplate.send("audio-packet-topic", sessionId, chunkToPublish);
+              System.out.println("Published Kafka message with sessionId: " + sessionId +
+                  " and chunk size: " + chunkToPublish.length + " bytes.");
 
               // 전송한 부분을 누적 버퍼에서 제거
               int remaining = accumulator.size() - 5120;
