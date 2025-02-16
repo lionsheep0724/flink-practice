@@ -31,9 +31,11 @@ services:
   kafdrop:
     image: obsidiandynamics/kafdrop
     restart: "unless-stopped"
+    depends_on:
+      - kafka
     ports:
       - "9000:9000"
     environment:
-      # 내부 컨테이너이므로 Kafka에 연결할 때는 서비스 이름을 사용합니다.
       KAFKA_BROKERCONNECT: "kafka:9092"
       JVM_OPTS: "-Xms32M -Xmx64M"
+
