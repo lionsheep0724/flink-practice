@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class SileroVadDetector {
   // OnnxModel model used for speech processing
-  private final SlieroVadOnnxModel model;
+  private final SileroVadOnnxModel model;
   // Threshold for speech start
   private final float startThreshold;
   // Threshold for speech end
@@ -42,7 +42,7 @@ public class SileroVadDetector {
     }
 
     // Initialize the parameters
-    this.model = new SlieroVadOnnxModel(modelPath);
+    this.model = new SileroVadOnnxModel(modelPath);
     this.startThreshold = startThreshold;
     this.endThreshold = endThreshold;
     this.samplingRate = samplingRate;

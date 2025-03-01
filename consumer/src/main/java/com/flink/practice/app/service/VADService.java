@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentMap;
 public class VADService {
 
   // VAD 모델 초기화에 필요한 상수 (필요에 따라 application.properties로 외부화 가능)
-  private static final String MODEL_PATH = "src/main/resources/silero_vad.onnx";
+  private static final String MODEL_PATH = "src/resources/silero_vad.onnx";
   private static final float START_THRESHOLD = 0.6f;
   private static final float END_THRESHOLD = 0.45f;
   private static final int SAMPLE_RATE = 16000;

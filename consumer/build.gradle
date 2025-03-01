@@ -34,6 +34,8 @@ dependencies {
     implementation 'com.microsoft.onnxruntime:onnxruntime:1.16.0-rc1'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+
 }
 
 tasks.withType(JavaCompile) {
