@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.flink.practice.app.vad.VadInferenceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-01T15:56:46" hostname="DESKTOP-FTHIR2G" time="0.487">
+<testsuite name="com.flink.practice.app.vad.VadInferenceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-07T11:35:38" hostname="DESKTOP-FTHIR2G" time="0.508">
   <properties/>
-  <testcase name="testVadInference()" classname="com.flink.practice.app.vad.VadInferenceTest" time="0.487"/>
-  <system-out><![CDATA[Actual VAD result: {}
+  <testcase name="testVadInference()" classname="com.flink.practice.app.vad.VadInferenceTest" time="0.508"/>
+  <system-out><![CDATA[20:35:39.435 [SessionTracker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- SessionTrackerImpl exited loop!
+Actual VAD result: {}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,9 +1,12 @@
 package com.flink.practice.app.jobs;
 
-import org.apache.flink.streaming.util.serialization.KeyedSerializationSchema;
+import org.apache.flink.connector.kafka.sink.KafkaRecordSerializationSchema;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class VadResultSerializationSchema implements KeyedSerializationSchema<VadResult> {
+import javax.annotation.Nullable;
+
+public class VadResultSerializationSchema implements KafkaRecordSerializationSchema<VadResult> {
 
   private final String targetTopic;
   private transient ObjectMapper mapper;
@@ -13,24 +16,18 @@ public class VadResultSerializationSchema implements KeyedSerializationSchema<Va
   }
 
   @Override
-  public byte[] serializeKey(VadResult element) {
-    return element.getSessionId() != null ? element.getSessionId().getBytes() : null;
-  }
-
-  @Override
-  public byte[] serializeValue(VadResult element) {
+  public ProducerRecord<byte[], byte[]> serialize(VadResult element, KafkaRecordSerializationSchema.KafkaSinkContext context, @Nullable Long timestamp) {
     try {
       if (mapper == null) {
         mapper = new ObjectMapper();
       }
-      return mapper.writeValueAsBytes(element);
+      
+      byte[] key = element.getSessionId() != null ? element.getSessionId().getBytes() : null;
+      byte[] value = mapper.writeValueAsBytes(element);
+      
+      return new ProducerRecord<>(targetTopic, key, value);
     } catch (Exception e) {
       throw new RuntimeException("Error serializing VadResult", e);
     }
-  }
-
-  @Override
-  public String getTargetTopic(VadResult element) {
-    return targetTopic;
   }
 }

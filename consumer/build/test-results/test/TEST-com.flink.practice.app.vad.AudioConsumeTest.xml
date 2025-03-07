@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.flink.practice.app.vad.AudioConsumeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-01T15:56:46" hostname="DESKTOP-FTHIR2G" time="0.297">
+<testsuite name="com.flink.practice.app.vad.AudioConsumeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-07T11:35:38" hostname="DESKTOP-FTHIR2G" time="0.3">
   <properties/>
-  <testcase name="testAudioPacketConsumption(EmbeddedKafkaBroker)" classname="com.flink.practice.app.vad.AudioConsumeTest" time="0.297"/>
-  <system-out><![CDATA[00:56:46.417 [Test worker] INFO org.apache.kafka.clients.producer.ProducerConfig -- ProducerConfig values: 
+  <testcase name="testAudioPacketConsumption(EmbeddedKafkaBroker)" classname="com.flink.practice.app.vad.AudioConsumeTest" time="0.3"/>
+  <system-out><![CDATA[20:35:38.430 [Test worker] INFO org.apache.kafka.clients.producer.ProducerConfig -- ProducerConfig values: 
 	acks = -1
 	auto.include.jmx.reporter = true
 	batch.size = 16384
-	bootstrap.servers = [127.0.0.1:58832]
+	bootstrap.servers = [127.0.0.1:51543]
 	buffer.memory = 33554432
 	client.dns.lookup = use_all_dns_ips
 	client.id = producer-1
@@ -92,25 +92,25 @@
 	transactional.id = null
 	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
 
-00:56:46.421 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Instantiated an idempotent producer.
-00:56:46.431 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
-00:56:46.431 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
-00:56:46.431 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1740844606431
-00:56:46.438 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to XGP2owIHRGGvB93vKMSOjQ
-00:56:46.440 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Cluster ID: KU5KVWHkT5OinTJ8NOwZKw
-00:56:46.445 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] Acquired new producerId block ProducerIdsBlock(assignedBrokerId=0, firstProducerId=0, size=1000) by writing to Zk with path version 1
-00:56:46.447 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.producer.internals.TransactionManager -- [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
-00:56:46.447 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-00:56:46.478 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
-00:56:46.478 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
-00:56:46.478 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
-00:56:46.478 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.producer for producer-1 unregistered
-00:56:46.484 [Test worker] INFO org.apache.kafka.clients.consumer.ConsumerConfig -- ConsumerConfig values: 
+20:35:38.434 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Instantiated an idempotent producer.
+20:35:38.444 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
+20:35:38.444 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
+20:35:38.444 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1741347338444
+20:35:38.452 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to JPVoxuBTT4yU6Wp1NneAQQ
+20:35:38.454 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Cluster ID: ADZzIsT2TQGdqdmORuODaw
+20:35:38.459 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] Acquired new producerId block ProducerIdsBlock(assignedBrokerId=0, firstProducerId=0, size=1000) by writing to Zk with path version 1
+20:35:38.461 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+20:35:38.461 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.producer.internals.TransactionManager -- [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+20:35:38.493 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
+20:35:38.494 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+20:35:38.494 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
+20:35:38.494 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.producer for producer-1 unregistered
+20:35:38.500 [Test worker] INFO org.apache.kafka.clients.consumer.ConsumerConfig -- ConsumerConfig values: 
 	allow.auto.create.topics = true
 	auto.commit.interval.ms = 5000
 	auto.include.jmx.reporter = true
 	auto.offset.reset = earliest
-	bootstrap.servers = [127.0.0.1:58832]
+	bootstrap.servers = [127.0.0.1:51543]
 	check.crcs = true
 	client.dns.lookup = use_all_dns_ips
 	client.id = consumer-test-group-1
@@ -199,222 +199,222 @@
 	ssl.truststore.type = JKS
 	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
 
-00:56:46.505 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
-00:56:46.507 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
-00:56:46.507 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1740844606505
-00:56:46.507 [Test worker] INFO org.apache.kafka.clients.consumer.KafkaConsumer -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Subscribed to topic(s): audio-packet-topic
-00:56:46.511 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to XGP2owIHRGGvB93vKMSOjQ
-00:56:46.511 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Cluster ID: KU5KVWHkT5OinTJ8NOwZKw
-00:56:46.514 [data-plane-kafka-request-handler-0] INFO kafka.zk.AdminZkClient -- Creating topic __consumer_offsets with configuration {compression.type=producer, cleanup.policy=compact, segment.bytes=104857600} and initial partition assignment HashMap(0 -> ArrayBuffer(0), 1 -> ArrayBuffer(0), 2 -> ArrayBuffer(0), 3 -> ArrayBuffer(0), 4 -> ArrayBuffer(0))
-00:56:46.517 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New topics: [Set(__consumer_offsets)], deleted topics: [HashSet()], new partition replica assignment [Set(TopicIdReplicaAssignment(__consumer_offsets,Some(m5yNTIjcTi6t_DcySlzbsw),HashMap(__consumer_offsets-4 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-3 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-2 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-0 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-1 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=))))]
-00:56:46.517 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New partition creation callback for __consumer_offsets-4,__consumer_offsets-3,__consumer_offsets-2,__consumer_offsets-0,__consumer_offsets-1
-00:56:46.517 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 state from NonExistentPartition to NewPartition with assigned replicas 0
-00:56:46.517 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 state from NonExistentPartition to NewPartition with assigned replicas 0
-00:56:46.517 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 state from NonExistentPartition to NewPartition with assigned replicas 0
-00:56:46.518 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 state from NonExistentPartition to NewPartition with assigned replicas 0
-00:56:46.518 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 state from NonExistentPartition to NewPartition with assigned replicas 0
-00:56:46.518 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
-00:56:46.518 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
-00:56:46.522 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-00:56:46.522 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-00:56:46.522 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-00:56:46.522 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-00:56:46.522 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-00:56:46.522 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending LeaderAndIsr request to broker 0 with 5 become-leader and 0 become-follower partitions
-00:56:46.522 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet(0) for 5 partitions
-00:56:46.523 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
-00:56:46.523 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Handling LeaderAndIsr request correlationId 3 from controller 0 for 5 partitions
-00:56:46.525 [data-plane-kafka-request-handler-2] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HashSet(__consumer_offsets-4, __consumer_offsets-3, __consumer_offsets-2, __consumer_offsets-0, __consumer_offsets-1)
-00:56:46.525 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Stopped fetchers as part of LeaderAndIsr request correlationId 3 from controller 0 epoch 1 as part of the become-leader transition for 5 partitions
-00:56:46.531 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-3, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566] Loading producer state till offset 0 with message format version 2
-00:56:46.532 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-3 in C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566\__consumer_offsets-3 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-00:56:46.533 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-3
-00:56:46.533 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] Log loaded for partition __consumer_offsets-3 with initial high watermark 0
-00:56:46.533 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-3 with topic id Some(m5yNTIjcTi6t_DcySlzbsw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-00:56:46.543 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-2, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566] Loading producer state till offset 0 with message format version 2
-00:56:46.544 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-2 in C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566\__consumer_offsets-2 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-00:56:46.544 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-2
-00:56:46.544 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] Log loaded for partition __consumer_offsets-2 with initial high watermark 0
-00:56:46.544 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-2 with topic id Some(m5yNTIjcTi6t_DcySlzbsw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-00:56:46.556 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-4, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566] Loading producer state till offset 0 with message format version 2
-00:56:46.556 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-4 in C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566\__consumer_offsets-4 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-00:56:46.556 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-4
-00:56:46.556 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] Log loaded for partition __consumer_offsets-4 with initial high watermark 0
-00:56:46.556 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-4 with topic id Some(m5yNTIjcTi6t_DcySlzbsw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-00:56:46.567 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-1, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566] Loading producer state till offset 0 with message format version 2
-00:56:46.568 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-1 in C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566\__consumer_offsets-1 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-00:56:46.568 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-1
-00:56:46.568 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] Log loaded for partition __consumer_offsets-1 with initial high watermark 0
-00:56:46.568 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-1 with topic id Some(m5yNTIjcTi6t_DcySlzbsw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-00:56:46.578 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-0, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566] Loading producer state till offset 0 with message format version 2
-00:56:46.578 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-0 in C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566\__consumer_offsets-0 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-00:56:46.578 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-0
-00:56:46.579 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] Log loaded for partition __consumer_offsets-0 with initial high watermark 0
-00:56:46.579 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-0 with topic id Some(m5yNTIjcTi6t_DcySlzbsw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-00:56:46.585 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 3 in epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-3 for epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 2 in epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-2 for epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 4 in epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-4 for epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 1 in epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-1 for epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 0 in epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-0 for epoch 0
-00:56:46.586 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Finished LeaderAndIsr request in 63ms correlationId 3 from controller 0 for 5 partitions
-00:56:46.587 [data-plane-kafka-request-handler-3] INFO state.change.logger -- [Broker id=0] Add 5 partitions and deleted 0 partitions from metadata cache in response to UpdateMetadata request sent by controller 0 epoch 1 with correlation id 4
-00:56:46.589 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-3 in 2 milliseconds for epoch 0, of which 0 milliseconds was spent in the scheduler.
-00:56:46.589 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-2 in 3 milliseconds for epoch 0, of which 3 milliseconds was spent in the scheduler.
-00:56:46.589 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-4 in 3 milliseconds for epoch 0, of which 3 milliseconds was spent in the scheduler.
-00:56:46.589 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-1 in 3 milliseconds for epoch 0, of which 3 milliseconds was spent in the scheduler.
-00:56:46.589 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-0 in 3 milliseconds for epoch 0, of which 3 milliseconds was spent in the scheduler.
-00:56:46.614 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Discovered group coordinator localhost:58832 (id: 2147483647 rack: null)
-00:56:46.617 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
-00:56:46.627 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Dynamic member with unknown member id joins group test-group in Empty state. Created a new member id consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb and request the member to rejoin with this id.
-00:56:46.628 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: need to re-join with the given member-id: consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb
-00:56:46.628 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-00:56:46.629 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
-00:56:46.631 [data-plane-kafka-request-handler-0] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 0 (__consumer_offsets-2) (reason: Adding new member consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb with group instance id None; client reason: rebalance failed due to MemberIdRequiredException)
-00:56:46.634 [executor-Rebalance] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Stabilized group test-group generation 1 (__consumer_offsets-2) with 1 members
-00:56:46.635 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb', protocol='range'}
-00:56:46.637 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Finished assignment for group at generation 1: {consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb=Assignment(partitions=[audio-packet-topic-0])}
-00:56:46.641 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Assignment received from leader consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb for group test-group for generation 1. The group has 1 members, 0 of which are static.
-00:56:46.647 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb', protocol='range'}
-00:56:46.647 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Notifying assignor about the new Assignment(partitions=[audio-packet-topic-0])
-00:56:46.649 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Adding newly assigned partitions: audio-packet-topic-0
-00:56:46.655 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Found no committed offset for partition audio-packet-topic-0
-00:56:46.663 [Test worker] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting offset for partition audio-packet-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:58832 (id: 0 rack: null)], epoch=0}}.
-00:56:46.691 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions audio-packet-topic-0
-00:56:46.691 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb sending LeaveGroup request to coordinator localhost:58832 (id: 2147483647 rack: null) due to the consumer is being closed
-00:56:46.691 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation and member id due to: consumer pro-actively leaving the group
-00:56:46.691 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: consumer pro-actively leaving the group
-00:56:46.693 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 1 (__consumer_offsets-2) (reason: Removing member consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb on LeaveGroup; client reason: the consumer is being closed)
-00:56:46.694 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Group test-group with generation 2 is now empty (__consumer_offsets-2)
-00:56:46.695 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Member MemberMetadata(memberId=consumer-test-group-1-b0bb9cf2-d164-42cb-ad27-9b4c74fe13fb, groupInstanceId=None, clientId=consumer-test-group-1, clientHost=/127.0.0.1, sessionTimeoutMs=45000, rebalanceTimeoutMs=300000, supportedProtocols=List(range, cooperative-sticky)) has left group test-group through explicit `LeaveGroup`; client reason: the consumer is being closed
-00:56:46.696 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
-00:56:46.696 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
-00:56:46.696 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
-00:56:46.697 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.consumer for consumer-test-group-1 unregistered
+20:35:38.523 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
+20:35:38.523 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
+20:35:38.523 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1741347338523
+20:35:38.524 [Test worker] INFO org.apache.kafka.clients.consumer.KafkaConsumer -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Subscribed to topic(s): audio-packet-topic
+20:35:38.528 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to JPVoxuBTT4yU6Wp1NneAQQ
+20:35:38.528 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Cluster ID: ADZzIsT2TQGdqdmORuODaw
+20:35:38.531 [data-plane-kafka-request-handler-0] INFO kafka.zk.AdminZkClient -- Creating topic __consumer_offsets with configuration {compression.type=producer, cleanup.policy=compact, segment.bytes=104857600} and initial partition assignment HashMap(0 -> ArrayBuffer(0), 1 -> ArrayBuffer(0), 2 -> ArrayBuffer(0), 3 -> ArrayBuffer(0), 4 -> ArrayBuffer(0))
+20:35:38.535 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New topics: [Set(__consumer_offsets)], deleted topics: [HashSet()], new partition replica assignment [Set(TopicIdReplicaAssignment(__consumer_offsets,Some(FXXeNVslRtyF64eDixqBJw),HashMap(__consumer_offsets-4 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-3 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-2 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-0 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-1 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=))))]
+20:35:38.535 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New partition creation callback for __consumer_offsets-4,__consumer_offsets-3,__consumer_offsets-2,__consumer_offsets-0,__consumer_offsets-1
+20:35:38.535 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 state from NonExistentPartition to NewPartition with assigned replicas 0
+20:35:38.535 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 state from NonExistentPartition to NewPartition with assigned replicas 0
+20:35:38.535 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 state from NonExistentPartition to NewPartition with assigned replicas 0
+20:35:38.535 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 state from NonExistentPartition to NewPartition with assigned replicas 0
+20:35:38.535 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 state from NonExistentPartition to NewPartition with assigned replicas 0
+20:35:38.535 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
+20:35:38.536 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
+20:35:38.540 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+20:35:38.540 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+20:35:38.540 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+20:35:38.540 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+20:35:38.540 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+20:35:38.540 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending LeaderAndIsr request to broker 0 with 5 become-leader and 0 become-follower partitions
+20:35:38.541 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet(0) for 5 partitions
+20:35:38.541 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
+20:35:38.541 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Handling LeaderAndIsr request correlationId 3 from controller 0 for 5 partitions
+20:35:38.542 [data-plane-kafka-request-handler-2] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HashSet(__consumer_offsets-4, __consumer_offsets-3, __consumer_offsets-2, __consumer_offsets-0, __consumer_offsets-1)
+20:35:38.542 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Stopped fetchers as part of LeaderAndIsr request correlationId 3 from controller 0 epoch 1 as part of the become-leader transition for 5 partitions
+20:35:38.548 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-3, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535] Loading producer state till offset 0 with message format version 2
+20:35:38.549 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-3 in C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535\__consumer_offsets-3 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+20:35:38.550 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-3
+20:35:38.550 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] Log loaded for partition __consumer_offsets-3 with initial high watermark 0
+20:35:38.550 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-3 with topic id Some(FXXeNVslRtyF64eDixqBJw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+20:35:38.561 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-2, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535] Loading producer state till offset 0 with message format version 2
+20:35:38.562 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-2 in C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535\__consumer_offsets-2 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+20:35:38.562 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-2
+20:35:38.562 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] Log loaded for partition __consumer_offsets-2 with initial high watermark 0
+20:35:38.562 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-2 with topic id Some(FXXeNVslRtyF64eDixqBJw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+20:35:38.575 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-4, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535] Loading producer state till offset 0 with message format version 2
+20:35:38.575 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-4 in C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535\__consumer_offsets-4 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+20:35:38.575 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-4
+20:35:38.575 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] Log loaded for partition __consumer_offsets-4 with initial high watermark 0
+20:35:38.575 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-4 with topic id Some(FXXeNVslRtyF64eDixqBJw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+20:35:38.589 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-1, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535] Loading producer state till offset 0 with message format version 2
+20:35:38.589 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-1 in C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535\__consumer_offsets-1 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+20:35:38.589 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-1
+20:35:38.589 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] Log loaded for partition __consumer_offsets-1 with initial high watermark 0
+20:35:38.589 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-1 with topic id Some(FXXeNVslRtyF64eDixqBJw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+20:35:38.600 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-0, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535] Loading producer state till offset 0 with message format version 2
+20:35:38.600 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-0 in C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535\__consumer_offsets-0 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+20:35:38.600 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-0
+20:35:38.600 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] Log loaded for partition __consumer_offsets-0 with initial high watermark 0
+20:35:38.600 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-0 with topic id Some(FXXeNVslRtyF64eDixqBJw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+20:35:38.608 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 3 in epoch 0
+20:35:38.608 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-3 for epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 2 in epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-2 for epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 4 in epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-4 for epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 1 in epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-1 for epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 0 in epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-0 for epoch 0
+20:35:38.609 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Finished LeaderAndIsr request in 68ms correlationId 3 from controller 0 for 5 partitions
+20:35:38.610 [data-plane-kafka-request-handler-3] INFO state.change.logger -- [Broker id=0] Add 5 partitions and deleted 0 partitions from metadata cache in response to UpdateMetadata request sent by controller 0 epoch 1 with correlation id 4
+20:35:38.615 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-3 in 7 milliseconds for epoch 0, of which 2 milliseconds was spent in the scheduler.
+20:35:38.616 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-2 in 7 milliseconds for epoch 0, of which 7 milliseconds was spent in the scheduler.
+20:35:38.616 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-4 in 7 milliseconds for epoch 0, of which 7 milliseconds was spent in the scheduler.
+20:35:38.616 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-1 in 7 milliseconds for epoch 0, of which 7 milliseconds was spent in the scheduler.
+20:35:38.616 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-0 in 7 milliseconds for epoch 0, of which 7 milliseconds was spent in the scheduler.
+20:35:38.631 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Discovered group coordinator localhost:51543 (id: 2147483647 rack: null)
+20:35:38.634 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
+20:35:38.644 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Dynamic member with unknown member id joins group test-group in Empty state. Created a new member id consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb and request the member to rejoin with this id.
+20:35:38.645 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: need to re-join with the given member-id: consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb
+20:35:38.645 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+20:35:38.647 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
+20:35:38.649 [data-plane-kafka-request-handler-0] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 0 (__consumer_offsets-2) (reason: Adding new member consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb with group instance id None; client reason: rebalance failed due to MemberIdRequiredException)
+20:35:38.653 [executor-Rebalance] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Stabilized group test-group generation 1 (__consumer_offsets-2) with 1 members
+20:35:38.654 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb', protocol='range'}
+20:35:38.656 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Finished assignment for group at generation 1: {consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb=Assignment(partitions=[audio-packet-topic-0])}
+20:35:38.659 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Assignment received from leader consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb for group test-group for generation 1. The group has 1 members, 0 of which are static.
+20:35:38.665 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb', protocol='range'}
+20:35:38.665 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Notifying assignor about the new Assignment(partitions=[audio-packet-topic-0])
+20:35:38.668 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Adding newly assigned partitions: audio-packet-topic-0
+20:35:38.674 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Found no committed offset for partition audio-packet-topic-0
+20:35:38.680 [Test worker] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting offset for partition audio-packet-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:51543 (id: 0 rack: null)], epoch=0}}.
+20:35:38.710 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions audio-packet-topic-0
+20:35:38.710 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb sending LeaveGroup request to coordinator localhost:51543 (id: 2147483647 rack: null) due to the consumer is being closed
+20:35:38.710 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+20:35:38.710 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: consumer pro-actively leaving the group
+20:35:38.713 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 1 (__consumer_offsets-2) (reason: Removing member consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb on LeaveGroup; client reason: the consumer is being closed)
+20:35:38.713 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Group test-group with generation 2 is now empty (__consumer_offsets-2)
+20:35:38.715 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Member MemberMetadata(memberId=consumer-test-group-1-5dd7a94e-3b55-42a9-b60b-17772429d3bb, groupInstanceId=None, clientId=consumer-test-group-1, clientHost=/127.0.0.1, sessionTimeoutMs=45000, rebalanceTimeoutMs=300000, supportedProtocols=List(range, cooperative-sticky)) has left group test-group through explicit `LeaveGroup`; client reason: the consumer is being closed
+20:35:38.715 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
+20:35:38.716 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+20:35:38.716 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
+20:35:38.716 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.consumer for consumer-test-group-1 unregistered
 Consumed record: key = test-session, value length = 5120 bytes
-First 20 bytes: AE 6B 7F 06 A7 78 20 B6 F5 1D 0A BF 89 1A 64 B1 84 59 19 08 
-00:56:46.706 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shutting down
-00:56:46.707 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutting down
-00:56:46.707 [/config/changes-event-process-thread] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Stopped
-00:56:46.707 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutdown completed
-00:56:46.708 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopping socket server request processors
-00:56:46.709 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO org.apache.kafka.clients.NetworkClient -- [BrokerToControllerChannelManager broker=0 name=forwarding] Node 0 disconnected.
-00:56:46.710 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopped socket server request processors
-00:56:46.711 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shutting down
-00:56:46.712 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shut down completely
-00:56:46.713 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutting down
-00:56:46.714 [ExpirationReaper-0-AlterAcls] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Stopped
-00:56:46.714 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutdown completed
-00:56:46.714 [Test worker] INFO kafka.server.KafkaApis -- [KafkaApi-0] Shutdown complete.
-00:56:46.715 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutting down
-00:56:46.715 [ExpirationReaper-0-topic] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Stopped
-00:56:46.715 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutdown completed
-00:56:46.716 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutting down.
-00:56:46.716 [Test worker] INFO kafka.coordinator.transaction.TransactionStateManager -- [Transaction State Manager 0]: Shutdown complete
-00:56:46.716 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutting down
-00:56:46.716 [TxnMarkerSenderThread-0] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Stopped
-00:56:46.716 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutdown completed
-00:56:46.716 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutdown complete.
-00:56:46.717 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutting down.
-00:56:46.717 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutting down
-00:56:46.717 [ExpirationReaper-0-Heartbeat] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Stopped
-00:56:46.717 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutdown completed
-00:56:46.717 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutting down
-00:56:46.717 [ExpirationReaper-0-Rebalance] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Stopped
-00:56:46.717 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutdown completed
-00:56:46.717 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutdown complete.
-00:56:46.718 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shutting down
-00:56:46.718 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutting down
-00:56:46.718 [LogDirFailureHandler] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Stopped
-00:56:46.718 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutdown completed
-00:56:46.718 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutting down
-00:56:46.718 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutdown completed
-00:56:46.719 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutting down
-00:56:46.719 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutdown completed
-00:56:46.719 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutting down
-00:56:46.719 [ExpirationReaper-0-Fetch] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Stopped
-00:56:46.719 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutdown completed
-00:56:46.719 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutting down
-00:56:46.719 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutdown completed
-00:56:46.719 [ExpirationReaper-0-Produce] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Stopped
-00:56:46.719 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutting down
-00:56:46.720 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutdown completed
-00:56:46.720 [ExpirationReaper-0-DeleteRecords] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Stopped
-00:56:46.720 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutting down
-00:56:46.720 [ExpirationReaper-0-ElectLeader] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Stopped
-00:56:46.720 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutdown completed
-00:56:46.725 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shut down completely
-00:56:46.727 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutting down
-00:56:46.727 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutdown completed
-00:56:46.727 [BrokerToControllerChannelManager broker=0 name=alterPartition] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Stopped
-00:56:46.728 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for alterPartition shutdown
-00:56:46.728 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutting down
-00:56:46.728 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Stopped
-00:56:46.728 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutdown completed
-00:56:46.728 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for forwarding shutdown
-00:56:46.728 [Test worker] INFO kafka.log.LogManager -- Shutting down.
-00:56:46.729 [Test worker] INFO kafka.log.LogCleaner -- Shutting down the log cleaner.
-00:56:46.729 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutting down
-00:56:46.729 [kafka-log-cleaner-thread-0] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Stopped
-00:56:46.729 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutdown completed
-00:56:46.765 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=audio-packet-topic-0] Wrote producer snapshot at offset 1 with 1 producer ids in 5 ms.
-00:56:46.776 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.2e1733a3-85e8-4f42-beca-ee90b239a1e818388637464810632566] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=__consumer_offsets-2] Wrote producer snapshot at offset 3 with 0 producer ids in 5 ms.
-00:56:46.790 [Test worker] INFO kafka.log.LogManager -- Shutdown complete.
-00:56:46.790 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutting down
-00:56:46.790 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutdown completed
-00:56:46.790 [controller-event-thread] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Stopped
-00:56:46.791 [Test worker] INFO kafka.controller.ZkPartitionStateMachine -- [PartitionStateMachine controllerId=0] Stopped partition state machine
-00:56:46.792 [Test worker] INFO kafka.controller.ZkReplicaStateMachine -- [ReplicaStateMachine controllerId=0] Stopped replica state machine
-00:56:46.792 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutting down
-00:56:46.792 [Controller-0-to-broker-0-send-thread] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Stopped
-00:56:46.792 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutdown completed
-00:56:46.793 [Test worker] INFO kafka.controller.KafkaController -- [Controller id=0] Resigned
-00:56:46.793 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutting down
-00:56:46.793 [feature-zk-node-event-process-thread] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Stopped
-00:56:46.793 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutdown completed
-00:56:46.793 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closing.
-00:56:46.897 [Test worker] INFO org.apache.zookeeper.ZooKeeper -- Session: 0x1000569e7700000 closed
-00:56:46.898 [Test worker-EventThread] INFO org.apache.zookeeper.ClientCnxn -- EventThread shut down for session: 0x1000569e7700000
-00:56:46.898 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closed.
-00:56:46.898 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutting down
-00:56:46.900 [ThrottledChannelReaper-Fetch] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Stopped
-00:56:46.900 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutdown completed
-00:56:46.900 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutting down
-00:56:46.900 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutdown completed
-00:56:46.900 [ThrottledChannelReaper-Produce] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Stopped
-00:56:46.900 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutting down
-00:56:46.900 [ThrottledChannelReaper-Request] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Stopped
-00:56:46.900 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutdown completed
-00:56:46.900 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutting down
-00:56:46.900 [ThrottledChannelReaper-ControllerMutation] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Stopped
-00:56:46.900 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutdown completed
-00:56:46.901 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutting down socket server
-00:56:46.913 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutdown completed
-00:56:46.913 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
-00:56:46.913 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
-00:56:46.913 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
-00:56:46.914 [Test worker] INFO kafka.server.BrokerTopicStats -- Broker and topic stats closed
-00:56:46.914 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.server for 0 unregistered
-00:56:46.914 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shut down completed
-00:56:46.923 [ConnnectionExpirer] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- ConnnectionExpirerThread interrupted
-00:56:46.923 [NIOServerCxnFactory.AcceptThread:/127.0.0.1:0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- accept thread exitted run method
-00:56:46.923 [NIOServerCxnFactory.SelectorThread-0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
-00:56:46.924 [NIOServerCxnFactory.SelectorThread-2] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
-00:56:46.924 [NIOServerCxnFactory.SelectorThread-1] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
-00:56:46.924 [Test worker] INFO org.apache.zookeeper.server.ZooKeeperServer -- shutting down
-00:56:46.924 [Test worker] INFO org.apache.zookeeper.server.RequestThrottler -- Shutting down
-00:56:46.924 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- Draining request throttler queue
-00:56:46.924 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- RequestThrottler shutdown. Dropped 0 requests
-00:56:46.924 [Test worker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- Shutting down
-00:56:46.924 [Test worker] INFO org.apache.zookeeper.server.PrepRequestProcessor -- Shutting down
-00:56:46.924 [Test worker] INFO org.apache.zookeeper.server.SyncRequestProcessor -- Shutting down
-00:56:46.924 [ProcessThread(sid:0 cport:58829):] INFO org.apache.zookeeper.server.PrepRequestProcessor -- PrepRequestProcessor exited loop!
-00:56:46.924 [SyncThread:0] INFO org.apache.zookeeper.server.SyncRequestProcessor -- SyncRequestProcessor exited!
-00:56:46.924 [Test worker] INFO org.apache.zookeeper.server.FinalRequestProcessor -- shutdown of request processor complete
+First 20 bytes: 4C 6F 21 82 9E A8 00 60 F6 5F 5C 2D 6A 06 07 A2 18 A4 F7 D8 
+20:35:38.721 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shutting down
+20:35:38.722 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutting down
+20:35:38.722 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutdown completed
+20:35:38.722 [/config/changes-event-process-thread] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Stopped
+20:35:38.722 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopping socket server request processors
+20:35:38.725 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO org.apache.kafka.clients.NetworkClient -- [BrokerToControllerChannelManager broker=0 name=forwarding] Node 0 disconnected.
+20:35:38.725 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopped socket server request processors
+20:35:38.725 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shutting down
+20:35:38.727 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shut down completely
+20:35:38.728 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutting down
+20:35:38.729 [ExpirationReaper-0-AlterAcls] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Stopped
+20:35:38.729 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutdown completed
+20:35:38.730 [Test worker] INFO kafka.server.KafkaApis -- [KafkaApi-0] Shutdown complete.
+20:35:38.730 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutting down
+20:35:38.731 [ExpirationReaper-0-topic] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Stopped
+20:35:38.731 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutdown completed
+20:35:38.731 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutting down.
+20:35:38.731 [Test worker] INFO kafka.coordinator.transaction.TransactionStateManager -- [Transaction State Manager 0]: Shutdown complete
+20:35:38.731 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutting down
+20:35:38.732 [TxnMarkerSenderThread-0] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Stopped
+20:35:38.732 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutdown completed
+20:35:38.732 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutdown complete.
+20:35:38.732 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutting down.
+20:35:38.732 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutting down
+20:35:38.733 [ExpirationReaper-0-Heartbeat] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Stopped
+20:35:38.733 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutdown completed
+20:35:38.733 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutting down
+20:35:38.733 [ExpirationReaper-0-Rebalance] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Stopped
+20:35:38.733 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutdown completed
+20:35:38.733 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutdown complete.
+20:35:38.733 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shutting down
+20:35:38.733 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutting down
+20:35:38.734 [LogDirFailureHandler] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Stopped
+20:35:38.734 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutdown completed
+20:35:38.734 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutting down
+20:35:38.734 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutdown completed
+20:35:38.734 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutting down
+20:35:38.734 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutdown completed
+20:35:38.734 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutting down
+20:35:38.734 [ExpirationReaper-0-Fetch] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Stopped
+20:35:38.734 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutdown completed
+20:35:38.734 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutting down
+20:35:38.735 [ExpirationReaper-0-Produce] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Stopped
+20:35:38.735 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutdown completed
+20:35:38.735 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutting down
+20:35:38.735 [ExpirationReaper-0-DeleteRecords] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Stopped
+20:35:38.735 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutdown completed
+20:35:38.735 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutting down
+20:35:38.735 [ExpirationReaper-0-ElectLeader] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Stopped
+20:35:38.735 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutdown completed
+20:35:38.742 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shut down completely
+20:35:38.742 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutting down
+20:35:38.742 [BrokerToControllerChannelManager broker=0 name=alterPartition] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Stopped
+20:35:38.742 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutdown completed
+20:35:38.743 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for alterPartition shutdown
+20:35:38.743 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutting down
+20:35:38.743 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutdown completed
+20:35:38.743 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Stopped
+20:35:38.743 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for forwarding shutdown
+20:35:38.743 [Test worker] INFO kafka.log.LogManager -- Shutting down.
+20:35:38.744 [Test worker] INFO kafka.log.LogCleaner -- Shutting down the log cleaner.
+20:35:38.744 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutting down
+20:35:38.744 [kafka-log-cleaner-thread-0] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Stopped
+20:35:38.744 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutdown completed
+20:35:38.786 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=audio-packet-topic-0] Wrote producer snapshot at offset 1 with 1 producer ids in 5 ms.
+20:35:38.797 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.6ae42b55-53b0-4b89-a1c7-d2c806517cc93547485472752413535] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=__consumer_offsets-2] Wrote producer snapshot at offset 3 with 0 producer ids in 4 ms.
+20:35:38.813 [Test worker] INFO kafka.log.LogManager -- Shutdown complete.
+20:35:38.813 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutting down
+20:35:38.813 [controller-event-thread] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Stopped
+20:35:38.813 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutdown completed
+20:35:38.814 [Test worker] INFO kafka.controller.ZkPartitionStateMachine -- [PartitionStateMachine controllerId=0] Stopped partition state machine
+20:35:38.814 [Test worker] INFO kafka.controller.ZkReplicaStateMachine -- [ReplicaStateMachine controllerId=0] Stopped replica state machine
+20:35:38.814 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutting down
+20:35:38.814 [Controller-0-to-broker-0-send-thread] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Stopped
+20:35:38.814 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutdown completed
+20:35:38.815 [Test worker] INFO kafka.controller.KafkaController -- [Controller id=0] Resigned
+20:35:38.815 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutting down
+20:35:38.815 [feature-zk-node-event-process-thread] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Stopped
+20:35:38.815 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutdown completed
+20:35:38.815 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closing.
+20:35:38.920 [Test worker] INFO org.apache.zookeeper.ZooKeeper -- Session: 0x10023614a720000 closed
+20:35:38.920 [Test worker-EventThread] INFO org.apache.zookeeper.ClientCnxn -- EventThread shut down for session: 0x10023614a720000
+20:35:38.921 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closed.
+20:35:38.921 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutting down
+20:35:38.922 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutdown completed
+20:35:38.922 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutting down
+20:35:38.922 [ThrottledChannelReaper-Fetch] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Stopped
+20:35:38.922 [ThrottledChannelReaper-Produce] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Stopped
+20:35:38.922 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutdown completed
+20:35:38.922 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutting down
+20:35:38.923 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutdown completed
+20:35:38.923 [ThrottledChannelReaper-Request] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Stopped
+20:35:38.923 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutting down
+20:35:38.923 [ThrottledChannelReaper-ControllerMutation] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Stopped
+20:35:38.923 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutdown completed
+20:35:38.924 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutting down socket server
+20:35:38.930 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutdown completed
+20:35:38.931 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
+20:35:38.931 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+20:35:38.931 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
+20:35:38.931 [Test worker] INFO kafka.server.BrokerTopicStats -- Broker and topic stats closed
+20:35:38.931 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.server for 0 unregistered
+20:35:38.932 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shut down completed
+20:35:38.942 [ConnnectionExpirer] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- ConnnectionExpirerThread interrupted
+20:35:38.943 [NIOServerCxnFactory.SelectorThread-1] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
+20:35:38.943 [NIOServerCxnFactory.SelectorThread-2] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
+20:35:38.943 [NIOServerCxnFactory.SelectorThread-0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
+20:35:38.943 [NIOServerCxnFactory.AcceptThread:/127.0.0.1:0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- accept thread exitted run method
+20:35:38.943 [Test worker] INFO org.apache.zookeeper.server.ZooKeeperServer -- shutting down
+20:35:38.943 [Test worker] INFO org.apache.zookeeper.server.RequestThrottler -- Shutting down
+20:35:38.943 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- Draining request throttler queue
+20:35:38.943 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- RequestThrottler shutdown. Dropped 0 requests
+20:35:38.943 [Test worker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- Shutting down
+20:35:38.943 [Test worker] INFO org.apache.zookeeper.server.PrepRequestProcessor -- Shutting down
+20:35:38.943 [Test worker] INFO org.apache.zookeeper.server.SyncRequestProcessor -- Shutting down
+20:35:38.943 [ProcessThread(sid:0 cport:51541):] INFO org.apache.zookeeper.server.PrepRequestProcessor -- PrepRequestProcessor exited loop!
+20:35:38.943 [SyncThread:0] INFO org.apache.zookeeper.server.SyncRequestProcessor -- SyncRequestProcessor exited!
+20:35:38.943 [Test worker] INFO org.apache.zookeeper.server.FinalRequestProcessor -- shutdown of request processor complete
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

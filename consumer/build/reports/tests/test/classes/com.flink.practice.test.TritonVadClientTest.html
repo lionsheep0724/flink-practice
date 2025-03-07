@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - VadInferenceTest</title>
+<title>Test results - TritonVadClientTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>VadInferenceTest</h1>
+<h1>TritonVadClientTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.flink.practice.app.vad.html">com.flink.practice.app.vad</a> &gt; VadInferenceTest</div>
+<a href="../packages/com.flink.practice.test.html">com.flink.practice.test</a> &gt; TritonVadClientTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.508s</div>
+<div class="counter">1.156s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,18 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testVadInference()</td>
-<td class="success">0.508s</td>
+<td class="success">testProcessAudioChunk_With512ByteChunks()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testProcessAudioChunk_WithLargerChunks()</td>
+<td class="success">0.023s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testReset()</td>
+<td class="success">1.124s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +97,7 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:35:39.435 [SessionTracker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- SessionTrackerImpl exited loop!
-Actual VAD result: {}
+<pre>20:35:40.599 [Test worker] ERROR com.flink.practice.app.jobs.TritonVadClient -- HTTP 요청 중 오류 발생: class com.fasterxml.jackson.databind.node.MissingNode cannot be cast to class com.fasterxml.jackson.databind.node.ObjectNode (com.fasterxml.jackson.databind.node.MissingNode and com.fasterxml.jackson.databind.node.ObjectNode are in unnamed module of loader 'app')
 </pre>
 </span>
 </div>

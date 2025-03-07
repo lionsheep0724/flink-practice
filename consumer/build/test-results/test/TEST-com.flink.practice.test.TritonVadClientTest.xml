@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.flink.practice.test.TritonVadClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-07T11:35:39" hostname="DESKTOP-FTHIR2G" time="1.159">
+  <properties/>
+  <testcase name="testReset()" classname="com.flink.practice.test.TritonVadClientTest" time="1.124"/>
+  <testcase name="testProcessAudioChunk_WithLargerChunks()" classname="com.flink.practice.test.TritonVadClientTest" time="0.023"/>
+  <testcase name="testProcessAudioChunk_With512ByteChunks()" classname="com.flink.practice.test.TritonVadClientTest" time="0.009"/>
+  <system-out><![CDATA[20:35:40.599 [Test worker] ERROR com.flink.practice.app.jobs.TritonVadClient -- HTTP 요청 중 오류 발생: class com.fasterxml.jackson.databind.node.MissingNode cannot be cast to class com.fasterxml.jackson.databind.node.ObjectNode (com.fasterxml.jackson.databind.node.MissingNode and com.fasterxml.jackson.databind.node.ObjectNode are in unnamed module of loader 'app')
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
