@@ -46,5 +46,12 @@ services:
       - "8002:8002"   # Metrics endpoint
     volumes:
       - ./tritonserver/model_repository:/models
-    
     command: ["tritonserver", "--model-repository=/models"]
+
+  stt-fastapi:
+    image: stt-fastapi:0.0.0
+    restart: "unless-stopped"
+    ports:
+      - "8080:8080"
+
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
