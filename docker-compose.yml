@@ -18,9 +18,7 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      # 두 개의 리스너를 설정합니다.
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,EXTERNAL://0.0.0.0:29092
-      # 내부 컨테이너는 'kafka:9092'를 사용하고, 외부 클라이언트는 'localhost:29092'를 사용하도록 광고합니다.
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
@@ -39,3 +37,14 @@ services:
       KAFKA_BROKERCONNECT: "kafka:9092"
       JVM_OPTS: "-Xms32M -Xmx64M"
 
+  vad-triton:
+    image: vad-tritonserver:0.0.0
+    restart: "unless-stopped"
+    ports:
+      - "8000:8000"   # HTTP endpoint
+      - "8001:8001"   # gRPC endpoint
+      - "8002:8002"   # Metrics endpoint
+    volumes:
+      - ./tritonserver/model_repository:/models
+    
+    command: ["tritonserver", "--model-repository=/models"]

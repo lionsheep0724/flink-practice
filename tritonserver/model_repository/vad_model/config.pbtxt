@@ -1,0 +1,72 @@
+name: "vad_model"
+backend: "python"
+
+parameters: [
+  {
+  key: "model_dir"
+  value: {
+    string_value: "/models/vad_model"
+  }
+}
+]
+
+input [
+  {
+    name: "AUDIO_CHUNK" 
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  }
+]
+
+output [
+  {
+    name: "EVENT"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  },
+  {
+    name: "TIMESTAMP"
+    data_type: TYPE_FP32
+    dims: [ 1 ]
+  }
+]
+
+sequence_batching {
+  max_sequence_idle_microseconds: 10000000
+  control_input [
+    {
+      name: "START"
+      control [
+        {
+          kind: CONTROL_SEQUENCE_START
+          fp32_false_true: [ 0, 1 ]
+        }
+      ]
+    },
+    {
+      name: "END"
+      control [
+        {
+          kind: CONTROL_SEQUENCE_END
+          fp32_false_true: [ 0, 1 ]
+        }
+      ]
+    },
+    {
+      name: "CORRID"
+      control [
+        {
+          kind: CONTROL_SEQUENCE_CORRID
+          data_type: TYPE_UINT64
+        }
+      ]
+    }
+  ]
+}
+
+instance_group: [
+  {
+    kind: KIND_CPU,
+    count: 1
+  }
+]
