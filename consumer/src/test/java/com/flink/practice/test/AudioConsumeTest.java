@@ -1,4 +1,4 @@
-package com.flink.practice.app.vad;
+package com.flink.practice.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
