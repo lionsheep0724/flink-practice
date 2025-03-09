@@ -7,14 +7,16 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - "2181:2181"
+    networks:
+      - stt_network
 
   kafka:
     image: confluentinc/cp-kafka:latest
     depends_on:
       - zookeeper
     ports:
-      - "9092:9092"       # 내부 및 컨테이너 간 통신용
-      - "29092:29092"     # 외부(호스트) 접근용
+      - "9092:9092"
+      - "29092:29092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -25,6 +27,8 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    networks:
+      - stt_network
 
   kafdrop:
     image: obsidiandynamics/kafdrop
@@ -36,22 +40,45 @@ services:
     environment:
       KAFKA_BROKERCONNECT: "kafka:9092"
       JVM_OPTS: "-Xms32M -Xmx64M"
+    networks:
+      - stt_network
+
+  producer:
+    build:
+      context: ./producer
+    image: producer:0.0.0
+    ports:
+      - "25250:25250"
+    environment:
+      SPRING_PROFILES_ACTIVE: "prod"
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
+    depends_on:
+      - kafka
+    networks:
+      - stt_network
 
   vad-triton:
     image: vad-tritonserver:0.0.0
     restart: "unless-stopped"
     ports:
-      - "8000:8000"   # HTTP endpoint
-      - "8001:8001"   # gRPC endpoint
-      - "8002:8002"   # Metrics endpoint
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
     volumes:
       - ./vad/model_repository:/models
     command: ["tritonserver", "--model-repository=/models"]
+    networks:
+      - stt_network
 
   stt-fastapi:
     image: stt-fastapi:0.0.0
     restart: "unless-stopped"
     ports:
       - "8080:8080"
-
     command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+    networks:
+      - stt_network
+
+networks:
+  stt_network:
+    driver: bridge

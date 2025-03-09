@@ -1,8 +1,8 @@
-m15:14:10.082 [Test worker] INFO org.apache.kafka.clients.producer.ProducerConfig -- ProducerConfig values: 
+m19:52:52.029 [Test worker] INFO org.apache.kafka.clients.producer.ProducerConfig -- ProducerConfig values: 
 	acks = -1
 #	auto.include.jmx.reporter = true
 	batch.size = 16384
-(	bootstrap.servers = [127.0.0.1:55267]
+(	bootstrap.servers = [127.0.0.1:58206]
 	buffer.memory = 33554432
 &	client.dns.lookup = use_all_dns_ips
 	client.id = producer-1
@@ -88,25 +88,25 @@
 	transactional.id = null
 U	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
 
-ò15:14:10.087 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Instantiated an idempotent producer.
-e15:14:10.096 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
-q15:14:10.096 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
-q15:14:10.096 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1741500850096
-í15:14:10.105 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to p6FaSP7wTKm2kTu8P5hrOA
-ß15:14:10.107 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Cluster ID: ipKI-vSRSUWb954me20MJw
-È15:14:10.112 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] Acquired new producerId block ProducerIdsBlock(assignedBrokerId=0, firstProducerId=0, size=1000) by writing to Zk with path version 1
-¬15:14:10.114 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.producer.internals.TransactionManager -- [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
-ª15:14:10.114 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
-e15:14:10.144 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
-â15:14:10.145 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
-e15:14:10.145 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
-Ñ15:14:10.145 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.producer for producer-1 unregistered
-m15:14:10.150 [Test worker] INFO org.apache.kafka.clients.consumer.ConsumerConfig -- ConsumerConfig values: 
+ò19:52:52.033 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Instantiated an idempotent producer.
+e19:52:52.043 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
+q19:52:52.043 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
+q19:52:52.043 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1741517572043
+í19:52:52.052 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to BYKFtKkfQhijf4iwhN70pQ
+ß19:52:52.053 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.Metadata -- [Producer clientId=producer-1] Cluster ID: Eg5y8QXASgea0GTuWSw4gw
+È19:52:52.058 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] Acquired new producerId block ProducerIdsBlock(assignedBrokerId=0, firstProducerId=0, size=1000) by writing to Zk with path version 1
+¬19:52:52.060 [kafka-producer-network-thread | producer-1] INFO org.apache.kafka.clients.producer.internals.TransactionManager -- [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+ª19:52:52.060 [Test worker] INFO org.apache.kafka.clients.producer.KafkaProducer -- [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+e19:52:52.095 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
+â19:52:52.095 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+e19:52:52.095 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
+Ñ19:52:52.095 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.producer for producer-1 unregistered
+m19:52:52.099 [Test worker] INFO org.apache.kafka.clients.consumer.ConsumerConfig -- ConsumerConfig values: 
 "	allow.auto.create.topics = true
 !	auto.commit.interval.ms = 5000
 #	auto.include.jmx.reporter = true
 	auto.offset.reset = earliest
-(	bootstrap.servers = [127.0.0.1:55267]
+(	bootstrap.servers = [127.0.0.1:58206]
 	check.crcs = true
 &	client.dns.lookup = use_all_dns_ips
 $	client.id = consumer-test-group-1
@@ -195,222 +195,222 @@
 	ssl.truststore.type = JKS
 Y	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
 
-e15:14:10.171 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
-q15:14:10.171 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
-q15:14:10.171 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1741500850171
-Ω15:14:10.171 [Test worker] INFO org.apache.kafka.clients.consumer.KafkaConsumer -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Subscribed to topic(s): audio-packet-topic
-í15:14:10.175 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to p6FaSP7wTKm2kTu8P5hrOA
-ß15:14:10.175 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Cluster ID: ipKI-vSRSUWb954me20MJw
-Ê15:14:10.178 [data-plane-kafka-request-handler-0] INFO kafka.zk.AdminZkClient -- Creating topic __consumer_offsets with configuration {compression.type=producer, cleanup.policy=compact, segment.bytes=104857600} and initial partition assignment HashMap(0 -> ArrayBuffer(0), 1 -> ArrayBuffer(0), 2 -> ArrayBuffer(0), 3 -> ArrayBuffer(0), 4 -> ArrayBuffer(0))
-Ë15:14:10.181 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New topics: [Set(__consumer_offsets)], deleted topics: [HashSet()], new partition replica assignment [Set(TopicIdReplicaAssignment(__consumer_offsets,Some(3KFPVtgATCyORCY0mrIOhQ),HashMap(__consumer_offsets-4 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-3 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-2 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-0 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-1 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=))))]
-15:14:10.182 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New partition creation callback for __consumer_offsets-4,__consumer_offsets-3,__consumer_offsets-2,__consumer_offsets-0,__consumer_offsets-1
-Œ15:14:10.182 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 state from NonExistentPartition to NewPartition with assigned replicas 0
-Œ15:14:10.182 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 state from NonExistentPartition to NewPartition with assigned replicas 0
-Œ15:14:10.182 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 state from NonExistentPartition to NewPartition with assigned replicas 0
-Œ15:14:10.182 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 state from NonExistentPartition to NewPartition with assigned replicas 0
-Œ15:14:10.182 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 state from NonExistentPartition to NewPartition with assigned replicas 0
-£15:14:10.182 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
-£15:14:10.182 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
-ô15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-ô15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-ô15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-ô15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-ô15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
-Ω15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending LeaderAndIsr request to broker 0 with 5 become-leader and 0 become-follower partitions
-§15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet(0) for 5 partitions
-£15:14:10.187 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
-Æ15:14:10.187 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Handling LeaderAndIsr request correlationId 3 from controller 0 for 5 partitions
-ó15:14:10.190 [data-plane-kafka-request-handler-2] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HashSet(__consumer_offsets-4, __consumer_offsets-3, __consumer_offsets-2, __consumer_offsets-0, __consumer_offsets-1)
-Ò15:14:10.191 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Stopped fetchers as part of LeaderAndIsr request correlationId 3 from controller 0 epoch 1 as part of the become-leader transition for 5 partitions
-™15:14:10.197 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-3, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458] Loading producer state till offset 0 with message format version 2
-‹15:14:10.197 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-3 in C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458\__consumer_offsets-3 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-«15:14:10.198 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-3
-…15:14:10.198 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] Log loaded for partition __consumer_offsets-3 with initial high watermark 0
-…15:14:10.198 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-3 with topic id Some(3KFPVtgATCyORCY0mrIOhQ) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-™15:14:10.208 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-2, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458] Loading producer state till offset 0 with message format version 2
-‹15:14:10.209 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-2 in C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458\__consumer_offsets-2 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-«15:14:10.209 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-2
-…15:14:10.209 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] Log loaded for partition __consumer_offsets-2 with initial high watermark 0
-…15:14:10.210 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-2 with topic id Some(3KFPVtgATCyORCY0mrIOhQ) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-™15:14:10.220 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-4, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458] Loading producer state till offset 0 with message format version 2
-‹15:14:10.221 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-4 in C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458\__consumer_offsets-4 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-«15:14:10.221 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-4
-…15:14:10.221 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] Log loaded for partition __consumer_offsets-4 with initial high watermark 0
-…15:14:10.221 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-4 with topic id Some(3KFPVtgATCyORCY0mrIOhQ) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-™15:14:10.232 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-1, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458] Loading producer state till offset 0 with message format version 2
-‹15:14:10.232 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-1 in C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458\__consumer_offsets-1 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-«15:14:10.232 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-1
-…15:14:10.232 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] Log loaded for partition __consumer_offsets-1 with initial high watermark 0
-…15:14:10.232 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-1 with topic id Some(3KFPVtgATCyORCY0mrIOhQ) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-™15:14:10.242 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-0, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458] Loading producer state till offset 0 with message format version 2
-‹15:14:10.243 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-0 in C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458\__consumer_offsets-0 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
-«15:14:10.243 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-0
-…15:14:10.243 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] Log loaded for partition __consumer_offsets-0 with initial high watermark 0
-…15:14:10.243 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-0 with topic id Some(3KFPVtgATCyORCY0mrIOhQ) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
-∂15:14:10.249 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 3 in epoch 0
-·15:14:10.249 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-3 for epoch 0
-∂15:14:10.250 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 2 in epoch 0
-·15:14:10.251 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-2 for epoch 0
-∂15:14:10.251 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 4 in epoch 0
-·15:14:10.251 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-4 for epoch 0
-∂15:14:10.251 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 1 in epoch 0
-·15:14:10.251 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-1 for epoch 0
-∂15:14:10.251 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 0 in epoch 0
-·15:14:10.251 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-0 for epoch 0
-∂15:14:10.251 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Finished LeaderAndIsr request in 64ms correlationId 3 from controller 0 for 5 partitions
-Ù15:14:10.252 [data-plane-kafka-request-handler-3] INFO state.change.logger -- [Broker id=0] Add 5 partitions and deleted 0 partitions from metadata cache in response to UpdateMetadata request sent by controller 0 epoch 1 with correlation id 4
-ô15:14:10.253 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-3 in 3 milliseconds for epoch 0, of which 2 milliseconds was spent in the scheduler.
-ô15:14:10.253 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-2 in 2 milliseconds for epoch 0, of which 2 milliseconds was spent in the scheduler.
-ô15:14:10.253 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-4 in 2 milliseconds for epoch 0, of which 2 milliseconds was spent in the scheduler.
-ô15:14:10.253 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-1 in 2 milliseconds for epoch 0, of which 2 milliseconds was spent in the scheduler.
-ô15:14:10.253 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-0 in 2 milliseconds for epoch 0, of which 2 milliseconds was spent in the scheduler.
-Î15:14:10.278 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Discovered group coordinator localhost:55267 (id: 2147483647 rack: null)
-µ15:14:10.281 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
-…15:14:10.289 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Dynamic member with unknown member id joins group test-group in Empty state. Created a new member id consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c and request the member to rejoin with this id.
-•15:14:10.291 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: need to re-join with the given member-id: consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c
-“15:14:10.292 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
-µ15:14:10.292 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
-†15:14:10.294 [data-plane-kafka-request-handler-0] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 0 (__consumer_offsets-2) (reason: Adding new member consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c with group instance id None; client reason: rebalance failed due to MemberIdRequiredException)
-π15:14:10.297 [executor-Rebalance] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Stabilized group test-group generation 1 (__consumer_offsets-2) with 1 members
-¿15:14:10.299 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c', protocol='range'}
-º15:14:10.300 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Finished assignment for group at generation 1: {consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c=Assignment(partitions=[audio-packet-topic-0])}
-¨15:14:10.304 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Assignment received from leader consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c for group test-group for generation 1. The group has 1 members, 0 of which are static.
-æ15:14:10.310 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c', protocol='range'}
-Ò15:14:10.311 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Notifying assignor about the new Assignment(partitions=[audio-packet-topic-0])
-Ÿ15:14:10.312 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Adding newly assigned partitions: audio-packet-topic-0
-ﬂ15:14:10.318 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Found no committed offset for partition audio-packet-topic-0
-Ò15:14:10.325 [Test worker] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting offset for partition audio-packet-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:55267 (id: 0 rack: null)], epoch=0}}.
-›15:14:10.353 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions audio-packet-topic-0
-ﬁ15:14:10.353 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c sending LeaveGroup request to coordinator localhost:55267 (id: 2147483647 rack: null) due to the consumer is being closed
-ı15:14:10.354 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation and member id due to: consumer pro-actively leaving the group
-Ë15:14:10.354 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: consumer pro-actively leaving the group
-˚15:14:10.355 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 1 (__consumer_offsets-2) (reason: Removing member consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c on LeaveGroup; client reason: the consumer is being closed)
-¡15:14:10.356 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Group test-group with generation 2 is now empty (__consumer_offsets-2)
-Ó15:14:10.357 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Member MemberMetadata(memberId=consumer-test-group-1-209736a4-0b48-483e-a536-01c46954a07c, groupInstanceId=None, clientId=consumer-test-group-1, clientHost=/127.0.0.1, sessionTimeoutMs=45000, rebalanceTimeoutMs=300000, supportedProtocols=List(range, cooperative-sticky)) has left group test-group through explicit `LeaveGroup`; client reason: the consumer is being closed
-e15:14:10.358 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
-â15:14:10.358 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
-e15:14:10.358 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
-è15:14:10.359 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.consumer for consumer-test-group-1 unregistered
+e19:52:52.121 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka version: 3.4.1
+q19:52:52.122 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka commitId: 8a516edc2755df89
+q19:52:52.122 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- Kafka startTimeMs: 1741517572121
+Ω19:52:52.122 [Test worker] INFO org.apache.kafka.clients.consumer.KafkaConsumer -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Subscribed to topic(s): audio-packet-topic
+í19:52:52.126 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting the last seen epoch of partition audio-packet-topic-0 to 0 since the associated topicId changed from null to BYKFtKkfQhijf4iwhN70pQ
+ß19:52:52.126 [Test worker] INFO org.apache.kafka.clients.Metadata -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Cluster ID: Eg5y8QXASgea0GTuWSw4gw
+Ê19:52:52.129 [data-plane-kafka-request-handler-0] INFO kafka.zk.AdminZkClient -- Creating topic __consumer_offsets with configuration {compression.type=producer, cleanup.policy=compact, segment.bytes=104857600} and initial partition assignment HashMap(0 -> ArrayBuffer(0), 1 -> ArrayBuffer(0), 2 -> ArrayBuffer(0), 3 -> ArrayBuffer(0), 4 -> ArrayBuffer(0))
+Ë19:52:52.133 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New topics: [Set(__consumer_offsets)], deleted topics: [HashSet()], new partition replica assignment [Set(TopicIdReplicaAssignment(__consumer_offsets,Some(1fVTuMAbSM28V0xCXbV1Vw),HashMap(__consumer_offsets-4 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-3 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-2 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-0 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=), __consumer_offsets-1 -> ReplicaAssignment(replicas=0, addingReplicas=, removingReplicas=))))]
+19:52:52.133 [controller-event-thread] INFO kafka.controller.KafkaController -- [Controller id=0] New partition creation callback for __consumer_offsets-4,__consumer_offsets-3,__consumer_offsets-2,__consumer_offsets-0,__consumer_offsets-1
+Œ19:52:52.133 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 state from NonExistentPartition to NewPartition with assigned replicas 0
+Œ19:52:52.133 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 state from NonExistentPartition to NewPartition with assigned replicas 0
+Œ19:52:52.133 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 state from NonExistentPartition to NewPartition with assigned replicas 0
+Œ19:52:52.133 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 state from NonExistentPartition to NewPartition with assigned replicas 0
+Œ19:52:52.133 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 state from NonExistentPartition to NewPartition with assigned replicas 0
+£19:52:52.133 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
+£19:52:52.133 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
+ô19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-4 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+ô19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-3 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+ô19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-2 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+ô19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-0 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+ô19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Changed partition __consumer_offsets-1 from NewPartition to OnlinePartition with state LeaderAndIsr(leader=0, leaderEpoch=0, isr=List(0), leaderRecoveryState=RECOVERED, partitionEpoch=0)
+Ω19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending LeaderAndIsr request to broker 0 with 5 become-leader and 0 become-follower partitions
+§19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet(0) for 5 partitions
+£19:52:52.138 [controller-event-thread] INFO state.change.logger -- [Controller id=0 epoch=1] Sending UpdateMetadata request to brokers HashSet() for 0 partitions
+Æ19:52:52.138 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Handling LeaderAndIsr request correlationId 3 from controller 0 for 5 partitions
+ó19:52:52.139 [data-plane-kafka-request-handler-2] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] Removed fetcher for partitions HashSet(__consumer_offsets-4, __consumer_offsets-3, __consumer_offsets-2, __consumer_offsets-0, __consumer_offsets-1)
+Ò19:52:52.139 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Stopped fetchers as part of LeaderAndIsr request correlationId 3 from controller 0 epoch 1 as part of the become-leader transition for 5 partitions
+™19:52:52.146 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-3, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371] Loading producer state till offset 0 with message format version 2
+‹19:52:52.146 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-3 in C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371\__consumer_offsets-3 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+«19:52:52.147 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-3
+…19:52:52.147 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-3 broker=0] Log loaded for partition __consumer_offsets-3 with initial high watermark 0
+…19:52:52.147 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-3 with topic id Some(1fVTuMAbSM28V0xCXbV1Vw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+™19:52:52.158 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-2, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371] Loading producer state till offset 0 with message format version 2
+‹19:52:52.159 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-2 in C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371\__consumer_offsets-2 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+«19:52:52.159 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-2
+…19:52:52.160 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-2 broker=0] Log loaded for partition __consumer_offsets-2 with initial high watermark 0
+…19:52:52.160 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-2 with topic id Some(1fVTuMAbSM28V0xCXbV1Vw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+™19:52:52.170 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-4, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371] Loading producer state till offset 0 with message format version 2
+‹19:52:52.170 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-4 in C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371\__consumer_offsets-4 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+«19:52:52.170 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-4
+…19:52:52.170 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-4 broker=0] Log loaded for partition __consumer_offsets-4 with initial high watermark 0
+…19:52:52.170 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-4 with topic id Some(1fVTuMAbSM28V0xCXbV1Vw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+™19:52:52.182 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-1, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371] Loading producer state till offset 0 with message format version 2
+‹19:52:52.182 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-1 in C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371\__consumer_offsets-1 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+«19:52:52.182 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-1
+…19:52:52.182 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-1 broker=0] Log loaded for partition __consumer_offsets-1 with initial high watermark 0
+…19:52:52.182 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-1 with topic id Some(1fVTuMAbSM28V0xCXbV1Vw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+™19:52:52.195 [data-plane-kafka-request-handler-2] INFO kafka.log.UnifiedLog$ -- [LogLoader partition=__consumer_offsets-0, dir=C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371] Loading producer state till offset 0 with message format version 2
+‹19:52:52.196 [data-plane-kafka-request-handler-2] INFO kafka.log.LogManager -- Created log for partition __consumer_offsets-0 in C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371\__consumer_offsets-0 with properties {cleanup.policy=compact, compression.type="producer", segment.bytes=104857600}
+«19:52:52.196 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] No checkpointed highwatermark is found for partition __consumer_offsets-0
+…19:52:52.196 [data-plane-kafka-request-handler-2] INFO kafka.cluster.Partition -- [Partition __consumer_offsets-0 broker=0] Log loaded for partition __consumer_offsets-0 with initial high watermark 0
+…19:52:52.196 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Leader __consumer_offsets-0 with topic id Some(1fVTuMAbSM28V0xCXbV1Vw) starts at leader epoch 0 from offset 0 with partition epoch 0, high watermark 0, ISR [0], adding replicas [] and removing replicas []. Previous leader epoch was -1.
+∂19:52:52.203 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 3 in epoch 0
+·19:52:52.203 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-3 for epoch 0
+∂19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 2 in epoch 0
+·19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-2 for epoch 0
+∂19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 4 in epoch 0
+·19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-4 for epoch 0
+∂19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 1 in epoch 0
+·19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-1 for epoch 0
+∂19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Elected as the group coordinator for partition 0 in epoch 0
+·19:52:52.204 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Scheduling loading of offsets and group metadata from __consumer_offsets-0 for epoch 0
+∂19:52:52.204 [data-plane-kafka-request-handler-2] INFO state.change.logger -- [Broker id=0] Finished LeaderAndIsr request in 66ms correlationId 3 from controller 0 for 5 partitions
+Ù19:52:52.205 [data-plane-kafka-request-handler-3] INFO state.change.logger -- [Broker id=0] Add 5 partitions and deleted 0 partitions from metadata cache in response to UpdateMetadata request sent by controller 0 epoch 1 with correlation id 4
+ô19:52:52.207 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-3 in 3 milliseconds for epoch 0, of which 1 milliseconds was spent in the scheduler.
+ô19:52:52.207 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-2 in 3 milliseconds for epoch 0, of which 3 milliseconds was spent in the scheduler.
+ô19:52:52.207 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-4 in 3 milliseconds for epoch 0, of which 3 milliseconds was spent in the scheduler.
+ô19:52:52.208 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-1 in 4 milliseconds for epoch 0, of which 4 milliseconds was spent in the scheduler.
+ô19:52:52.208 [group-metadata-manager-0] INFO kafka.coordinator.group.GroupMetadataManager -- [GroupMetadataManager brokerId=0] Finished loading offsets and group metadata from __consumer_offsets-0 in 4 milliseconds for epoch 0, of which 4 milliseconds was spent in the scheduler.
+Î19:52:52.229 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Discovered group coordinator localhost:58206 (id: 2147483647 rack: null)
+µ19:52:52.231 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
+…19:52:52.241 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Dynamic member with unknown member id joins group test-group in Empty state. Created a new member id consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881 and request the member to rejoin with this id.
+•19:52:52.243 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: need to re-join with the given member-id: consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881
+“19:52:52.243 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+µ19:52:52.243 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] (Re-)joining group
+†19:52:52.246 [data-plane-kafka-request-handler-0] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 0 (__consumer_offsets-2) (reason: Adding new member consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881 with group instance id None; client reason: rebalance failed due to MemberIdRequiredException)
+π19:52:52.249 [executor-Rebalance] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Stabilized group test-group generation 1 (__consumer_offsets-2) with 1 members
+¿19:52:52.250 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881', protocol='range'}
+º19:52:52.251 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Finished assignment for group at generation 1: {consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881=Assignment(partitions=[audio-packet-topic-0])}
+¨19:52:52.255 [data-plane-kafka-request-handler-2] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Assignment received from leader consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881 for group test-group for generation 1. The group has 1 members, 0 of which are static.
+æ19:52:52.263 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881', protocol='range'}
+Ò19:52:52.263 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Notifying assignor about the new Assignment(partitions=[audio-packet-topic-0])
+Ÿ19:52:52.264 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Adding newly assigned partitions: audio-packet-topic-0
+ﬂ19:52:52.269 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Found no committed offset for partition audio-packet-topic-0
+Ò19:52:52.276 [Test worker] INFO org.apache.kafka.clients.consumer.internals.SubscriptionState -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting offset for partition audio-packet-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:58206 (id: 0 rack: null)], epoch=0}}.
+›19:52:52.304 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Revoke previously assigned partitions audio-packet-topic-0
+ﬁ19:52:52.304 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Member consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881 sending LeaveGroup request to coordinator localhost:58206 (id: 2147483647 rack: null) due to the consumer is being closed
+ı19:52:52.305 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+Ë19:52:52.305 [Test worker] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator -- [Consumer clientId=consumer-test-group-1, groupId=test-group] Request joining group due to: consumer pro-actively leaving the group
+˚19:52:52.307 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Preparing to rebalance group test-group in state PreparingRebalance with old generation 1 (__consumer_offsets-2) (reason: Removing member consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881 on LeaveGroup; client reason: the consumer is being closed)
+¡19:52:52.307 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Group test-group with generation 2 is now empty (__consumer_offsets-2)
+Ó19:52:52.309 [data-plane-kafka-request-handler-7] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Member MemberMetadata(memberId=consumer-test-group-1-22f5e7cb-12e5-41ff-aa00-87a9384a0881, groupInstanceId=None, clientId=consumer-test-group-1, clientHost=/127.0.0.1, sessionTimeoutMs=45000, rebalanceTimeoutMs=300000, supportedProtocols=List(range, cooperative-sticky)) has left group test-group through explicit `LeaveGroup`; client reason: the consumer is being closed
+e19:52:52.310 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
+â19:52:52.310 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+e19:52:52.310 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
+è19:52:52.311 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.consumer for consumer-test-group-1 unregistered
 @Consumed record: key = test-session, value length = 5120 bytes
-NFirst 20 bytes: 4A 12 02 CD 0A 9E 5D 0F 96 C6 0C 77 05 A3 6B B5 F7 17 75 2B 
- ^15:14:10.364 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shutting down
- °15:14:10.365 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutting down
- ¶15:14:10.365 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutdown completed
- ¥15:14:10.365 [/config/changes-event-process-thread] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Stopped
- ô15:14:10.365 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopping socket server request processors
-  15:14:10.367 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO org.apache.kafka.clients.NetworkClient -- [BrokerToControllerChannelManager broker=0 name=forwarding] Node 0 disconnected.
- ò15:14:10.368 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopped socket server request processors
- á15:14:10.368 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shutting down
- é15:14:10.369 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shut down completely
- ê15:14:10.370 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutting down
- õ15:14:10.371 [ExpirationReaper-0-AlterAcls] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Stopped
- ï15:14:10.371 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutdown completed
- [15:14:10.371 [Test worker] INFO kafka.server.KafkaApis -- [KafkaApi-0] Shutdown complete.
- å15:14:10.372 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutting down
- ì15:14:10.372 [ExpirationReaper-0-topic] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Stopped
- ë15:14:10.372 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutdown completed
- Ü15:14:10.373 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutting down.
- ã15:14:10.373 [Test worker] INFO kafka.coordinator.transaction.TransactionStateManager -- [Transaction State Manager 0]: Shutdown complete
- ò15:14:10.373 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutting down
- û15:14:10.373 [TxnMarkerSenderThread-0] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Stopped
- ù15:14:10.373 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutdown completed
- ä15:14:10.373 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutdown complete.
- r15:14:10.374 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutting down.
- ê15:14:10.374 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutting down
- õ15:14:10.374 [ExpirationReaper-0-Heartbeat] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Stopped
- ï15:14:10.374 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutdown completed
- ê15:14:10.374 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutting down
- ï15:14:10.374 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutdown completed
- õ15:14:10.374 [ExpirationReaper-0-Rebalance] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Stopped
- v15:14:10.375 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutdown complete.
- h15:14:10.375 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shutting down
- {15:14:10.375 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutting down
- ~15:14:10.375 [LogDirFailureHandler] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Stopped
- Ä15:14:10.375 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutdown completed
- y15:14:10.375 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutting down
- ~15:14:10.376 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutdown completed
- É15:14:10.376 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutting down
- à15:14:10.376 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutdown completed
- å15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutting down
- ì15:14:10.376 [ExpirationReaper-0-Fetch] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Stopped
- ë15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutdown completed
- é15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutting down
- ó15:14:10.376 [ExpirationReaper-0-Produce] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Stopped
- ì15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutdown completed
- î15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutting down
- £15:14:10.376 [ExpirationReaper-0-DeleteRecords] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Stopped
- ô15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutdown completed
- í15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutting down
- ü15:14:10.376 [ExpirationReaper-0-ElectLeader] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Stopped
- ó15:14:10.376 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutdown completed
- o15:14:10.382 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shut down completely
- †15:14:10.382 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutting down
- Ã15:14:10.382 [BrokerToControllerChannelManager broker=0 name=alterPartition] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Stopped
- •15:14:10.382 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutdown completed
- ó15:14:10.382 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for alterPartition shutdown
- ú15:14:10.383 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutting down
- °15:14:10.383 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutdown completed
- ƒ15:14:10.383 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Stopped
- ì15:14:10.383 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for forwarding shutdown
- H15:14:10.383 [Test worker] INFO kafka.log.LogManager -- Shutting down.
- X15:14:10.383 [Test worker] INFO kafka.log.LogCleaner -- Shutting down the log cleaner.
- e15:14:10.383 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutting down
- n15:14:10.384 [kafka-log-cleaner-thread-0] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Stopped
- j15:14:10.384 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutdown completed
- †15:14:10.419 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=audio-packet-topic-0] Wrote producer snapshot at offset 1 with 1 producer ids in 5 ms.
- †15:14:10.430 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.88df0ded-dda5-4461-9367-11bfb3009d867000420724505247458] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=__consumer_offsets-2] Wrote producer snapshot at offset 3 with 0 producer ids in 4 ms.
- L15:14:10.445 [Test worker] INFO kafka.log.LogManager -- Shutdown complete.
- ó15:14:10.446 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutting down
- ú15:14:10.446 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutdown completed
- ù15:14:10.446 [controller-event-thread] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Stopped
- î15:14:10.447 [Test worker] INFO kafka.controller.ZkPartitionStateMachine -- [PartitionStateMachine controllerId=0] Stopped partition state machine
- é15:14:10.447 [Test worker] INFO kafka.controller.ZkReplicaStateMachine -- [ReplicaStateMachine controllerId=0] Stopped replica state machine
- x15:14:10.447 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutting down
- ã15:14:10.447 [Controller-0-to-broker-0-send-thread] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Stopped
- }15:14:10.447 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutdown completed
- `15:14:10.448 [Test worker] INFO kafka.controller.KafkaController -- [Controller id=0] Resigned
- ®15:14:10.448 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutting down
- ≠15:14:10.448 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutdown completed
- ª15:14:10.448 [feature-zk-node-event-process-thread] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Stopped
- l15:14:10.448 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closing.
- Ö15:14:10.551 [Test worker-EventThread] INFO org.apache.zookeeper.ClientCnxn -- EventThread shut down for session: 0x1002c87dfaa0000
- e15:14:10.551 [Test worker] INFO org.apache.zookeeper.ZooKeeper -- Session: 0x1002c87dfaa0000 closed
- k15:14:10.551 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closed.
- â15:14:10.551 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutting down
- é15:14:10.552 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutdown completed
- ã15:14:10.552 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutting down
- î15:14:10.552 [ThrottledChannelReaper-Fetch] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Stopped
- ò15:14:10.552 [ThrottledChannelReaper-Produce] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Stopped
- ê15:14:10.552 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutdown completed
- ã15:14:10.552 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutting down
- ò15:14:10.552 [ThrottledChannelReaper-Request] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Stopped
- ê15:14:10.552 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutdown completed
- ñ15:14:10.553 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutting down
- Æ15:14:10.553 [ThrottledChannelReaper-ControllerMutation] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Stopped
- õ15:14:10.553 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutdown completed
- ã15:14:10.553 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutting down socket server
- Ç15:14:10.564 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutdown completed
- e15:14:10.564 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
- â15:14:10.564 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
- e15:14:10.565 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
- `15:14:10.565 [Test worker] INFO kafka.server.BrokerTopicStats -- Broker and topic stats closed
- y15:14:10.566 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.server for 0 unregistered
- d15:14:10.566 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shut down completed
- Å15:14:10.578 [ConnnectionExpirer] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- ConnnectionExpirerThread interrupted
- ë15:14:10.579 [NIOServerCxnFactory.SelectorThread-0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
- ë15:14:10.579 [NIOServerCxnFactory.SelectorThread-1] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
- ë15:14:10.579 [NIOServerCxnFactory.SelectorThread-2] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
- ò15:14:10.579 [NIOServerCxnFactory.AcceptThread:/127.0.0.1:0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- accept thread exitted run method
- ^15:14:10.579 [Test worker] INFO org.apache.zookeeper.server.ZooKeeperServer -- shutting down
- _15:14:10.579 [Test worker] INFO org.apache.zookeeper.server.RequestThrottler -- Shutting down
- w15:14:10.579 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- Draining request throttler queue
- Ñ15:14:10.579 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- RequestThrottler shutdown. Dropped 0 requests
- a15:14:10.580 [Test worker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- Shutting down
- c15:14:10.580 [Test worker] INFO org.apache.zookeeper.server.PrepRequestProcessor -- Shutting down
- c15:14:10.580 [Test worker] INFO org.apache.zookeeper.server.SyncRequestProcessor -- Shutting down
- ç15:14:10.580 [ProcessThread(sid:0 cport:55265):] INFO org.apache.zookeeper.server.PrepRequestProcessor -- PrepRequestProcessor exited loop!
- s15:14:10.580 [SyncThread:0] INFO org.apache.zookeeper.server.SyncRequestProcessor -- SyncRequestProcessor exited!
- }15:14:10.580 [Test worker] INFO org.apache.zookeeper.server.FinalRequestProcessor -- shutdown of request processor complete
+NFirst 20 bytes: C0 35 2E 5F 65 D0 9C DC 9C 04 14 6E 6F 4E D1 D9 49 F0 29 E4 
+ ^19:52:52.316 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shutting down
+ °19:52:52.317 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutting down
+ ¶19:52:52.317 [Test worker] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Shutdown completed
+ ¥19:52:52.317 [/config/changes-event-process-thread] INFO kafka.common.ZkNodeChangeNotificationListener$ChangeEventProcessThread -- [/config/changes-event-process-thread]: Stopped
+ ô19:52:52.317 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopping socket server request processors
+  19:52:52.319 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO org.apache.kafka.clients.NetworkClient -- [BrokerToControllerChannelManager broker=0 name=forwarding] Node 0 disconnected.
+ ò19:52:52.320 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Stopped socket server request processors
+ á19:52:52.321 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shutting down
+ é19:52:52.322 [Test worker] INFO kafka.server.KafkaRequestHandlerPool -- [data-plane Kafka Request Handler on Broker 0], shut down completely
+ ê19:52:52.323 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutting down
+ õ19:52:52.324 [ExpirationReaper-0-AlterAcls] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Stopped
+ ï19:52:52.324 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-AlterAcls]: Shutdown completed
+ [19:52:52.324 [Test worker] INFO kafka.server.KafkaApis -- [KafkaApi-0] Shutdown complete.
+ å19:52:52.324 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutting down
+ ì19:52:52.325 [ExpirationReaper-0-topic] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Stopped
+ ë19:52:52.325 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-topic]: Shutdown completed
+ Ü19:52:52.325 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutting down.
+ ã19:52:52.326 [Test worker] INFO kafka.coordinator.transaction.TransactionStateManager -- [Transaction State Manager 0]: Shutdown complete
+ ò19:52:52.326 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutting down
+ û19:52:52.326 [TxnMarkerSenderThread-0] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Stopped
+ ù19:52:52.326 [Test worker] INFO kafka.coordinator.transaction.TransactionMarkerChannelManager -- [Transaction Marker Channel Manager 0]: Shutdown completed
+ ä19:52:52.326 [Test worker] INFO kafka.coordinator.transaction.TransactionCoordinator -- [TransactionCoordinator id=0] Shutdown complete.
+ r19:52:52.326 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutting down.
+ ê19:52:52.327 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutting down
+ õ19:52:52.327 [ExpirationReaper-0-Heartbeat] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Stopped
+ ï19:52:52.327 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Heartbeat]: Shutdown completed
+ ê19:52:52.327 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutting down
+ õ19:52:52.327 [ExpirationReaper-0-Rebalance] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Stopped
+ ï19:52:52.327 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Rebalance]: Shutdown completed
+ v19:52:52.327 [Test worker] INFO kafka.coordinator.group.GroupCoordinator -- [GroupCoordinator 0]: Shutdown complete.
+ h19:52:52.327 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shutting down
+ {19:52:52.328 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutting down
+ ~19:52:52.328 [LogDirFailureHandler] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Stopped
+ Ä19:52:52.328 [Test worker] INFO kafka.server.ReplicaManager$LogDirFailureHandler -- [LogDirFailureHandler]: Shutdown completed
+ y19:52:52.328 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutting down
+ ~19:52:52.328 [Test worker] INFO kafka.server.ReplicaFetcherManager -- [ReplicaFetcherManager on broker 0] shutdown completed
+ É19:52:52.328 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutting down
+ à19:52:52.328 [Test worker] INFO kafka.server.ReplicaAlterLogDirsManager -- [ReplicaAlterLogDirsManager on broker 0] shutdown completed
+ å19:52:52.328 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutting down
+ ì19:52:52.328 [ExpirationReaper-0-Fetch] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Stopped
+ ë19:52:52.328 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Fetch]: Shutdown completed
+ é19:52:52.328 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutting down
+ ó19:52:52.329 [ExpirationReaper-0-Produce] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Stopped
+ ì19:52:52.329 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-Produce]: Shutdown completed
+ î19:52:52.329 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutting down
+ £19:52:52.329 [ExpirationReaper-0-DeleteRecords] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Stopped
+ ô19:52:52.329 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-DeleteRecords]: Shutdown completed
+ í19:52:52.329 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutting down
+ ü19:52:52.329 [ExpirationReaper-0-ElectLeader] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Stopped
+ ó19:52:52.329 [Test worker] INFO kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper -- [ExpirationReaper-0-ElectLeader]: Shutdown completed
+ o19:52:52.335 [Test worker] INFO kafka.server.ReplicaManager -- [ReplicaManager broker=0] Shut down completely
+ †19:52:52.335 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutting down
+ •19:52:52.335 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Shutdown completed
+ Ã19:52:52.335 [BrokerToControllerChannelManager broker=0 name=alterPartition] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=alterPartition]: Stopped
+ ó19:52:52.335 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for alterPartition shutdown
+ ú19:52:52.335 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutting down
+ ƒ19:52:52.335 [BrokerToControllerChannelManager broker=0 name=forwarding] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Stopped
+ °19:52:52.335 [Test worker] INFO kafka.server.BrokerToControllerRequestThread -- [BrokerToControllerChannelManager broker=0 name=forwarding]: Shutdown completed
+ ì19:52:52.336 [Test worker] INFO kafka.server.BrokerToControllerChannelManagerImpl -- Broker to controller channel manager for forwarding shutdown
+ H19:52:52.336 [Test worker] INFO kafka.log.LogManager -- Shutting down.
+ X19:52:52.336 [Test worker] INFO kafka.log.LogCleaner -- Shutting down the log cleaner.
+ e19:52:52.336 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutting down
+ j19:52:52.337 [Test worker] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Shutdown completed
+ n19:52:52.337 [kafka-log-cleaner-thread-0] INFO kafka.log.LogCleaner -- [kafka-log-cleaner-thread-0]: Stopped
+ †19:52:52.374 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=audio-packet-topic-0] Wrote producer snapshot at offset 1 with 1 producer ids in 5 ms.
+ †19:52:52.385 [log-closing-C:\Users\user\AppData\Local\Temp\spring.kafka.21327a4d-d281-45db-ae9d-0d940b9338c19262964170964542371] INFO kafka.log.ProducerStateManager -- [ProducerStateManager partition=__consumer_offsets-2] Wrote producer snapshot at offset 3 with 0 producer ids in 4 ms.
+ L19:52:52.399 [Test worker] INFO kafka.log.LogManager -- Shutdown complete.
+ ó19:52:52.399 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutting down
+ ú19:52:52.399 [Test worker] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Shutdown completed
+ ù19:52:52.399 [controller-event-thread] INFO kafka.controller.ControllerEventManager$ControllerEventThread -- [ControllerEventThread controllerId=0] Stopped
+ î19:52:52.400 [Test worker] INFO kafka.controller.ZkPartitionStateMachine -- [PartitionStateMachine controllerId=0] Stopped partition state machine
+ é19:52:52.401 [Test worker] INFO kafka.controller.ZkReplicaStateMachine -- [ReplicaStateMachine controllerId=0] Stopped replica state machine
+ x19:52:52.401 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutting down
+ }19:52:52.401 [Test worker] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Shutdown completed
+ ã19:52:52.401 [Controller-0-to-broker-0-send-thread] INFO kafka.controller.RequestSendThread -- [RequestSendThread controllerId=0] Stopped
+ `19:52:52.402 [Test worker] INFO kafka.controller.KafkaController -- [Controller id=0] Resigned
+ ®19:52:52.402 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutting down
+ ª19:52:52.402 [feature-zk-node-event-process-thread] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Stopped
+ ≠19:52:52.402 [Test worker] INFO kafka.server.FinalizedFeatureChangeListener$ChangeNotificationProcessorThread -- [feature-zk-node-event-process-thread]: Shutdown completed
+ l19:52:52.402 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closing.
+ Ö19:52:52.506 [Test worker-EventThread] INFO org.apache.zookeeper.ClientCnxn -- EventThread shut down for session: 0x1002d8707b90000
+ e19:52:52.506 [Test worker] INFO org.apache.zookeeper.ZooKeeper -- Session: 0x1002d8707b90000 closed
+ k19:52:52.507 [Test worker] INFO kafka.zookeeper.ZooKeeperClient -- [ZooKeeperClient Kafka server] Closed.
+ â19:52:52.507 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutting down
+ î19:52:52.508 [ThrottledChannelReaper-Fetch] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Stopped
+ é19:52:52.508 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Fetch]: Shutdown completed
+ ã19:52:52.508 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutting down
+ ê19:52:52.508 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Shutdown completed
+ ò19:52:52.508 [ThrottledChannelReaper-Produce] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Produce]: Stopped
+ ã19:52:52.508 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutting down
+ ò19:52:52.508 [ThrottledChannelReaper-Request] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Stopped
+ ê19:52:52.508 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-Request]: Shutdown completed
+ ñ19:52:52.509 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutting down
+ õ19:52:52.509 [Test worker] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Shutdown completed
+ Æ19:52:52.509 [ThrottledChannelReaper-ControllerMutation] INFO kafka.server.ClientQuotaManager$ThrottledChannelReaper -- [ThrottledChannelReaper-ControllerMutation]: Stopped
+ ã19:52:52.509 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutting down socket server
+ Ç19:52:52.516 [Test worker] INFO kafka.network.SocketServer -- [SocketServer listenerType=ZK_BROKER, nodeId=0] Shutdown completed
+ e19:52:52.516 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics scheduler closed
+ â19:52:52.516 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Closing reporter org.apache.kafka.common.metrics.JmxReporter
+ e19:52:52.517 [Test worker] INFO org.apache.kafka.common.metrics.Metrics -- Metrics reporters closed
+ `19:52:52.517 [Test worker] INFO kafka.server.BrokerTopicStats -- Broker and topic stats closed
+ y19:52:52.517 [Test worker] INFO org.apache.kafka.common.utils.AppInfoParser -- App info kafka.server for 0 unregistered
+ d19:52:52.517 [Test worker] INFO kafka.server.KafkaServer -- [KafkaServer id=0] shut down completed
+ Å19:52:52.526 [ConnnectionExpirer] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- ConnnectionExpirerThread interrupted
+ ë19:52:52.527 [NIOServerCxnFactory.SelectorThread-2] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
+ ë19:52:52.527 [NIOServerCxnFactory.SelectorThread-0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
+ ë19:52:52.527 [NIOServerCxnFactory.SelectorThread-1] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- selector thread exitted run method
+ ò19:52:52.527 [NIOServerCxnFactory.AcceptThread:/127.0.0.1:0] INFO org.apache.zookeeper.server.NIOServerCnxnFactory -- accept thread exitted run method
+ ^19:52:52.527 [Test worker] INFO org.apache.zookeeper.server.ZooKeeperServer -- shutting down
+ _19:52:52.527 [Test worker] INFO org.apache.zookeeper.server.RequestThrottler -- Shutting down
+ w19:52:52.528 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- Draining request throttler queue
+ Ñ19:52:52.528 [RequestThrottler] INFO org.apache.zookeeper.server.RequestThrottler -- RequestThrottler shutdown. Dropped 0 requests
+ a19:52:52.528 [Test worker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- Shutting down
+ c19:52:52.528 [Test worker] INFO org.apache.zookeeper.server.PrepRequestProcessor -- Shutting down
+ c19:52:52.528 [Test worker] INFO org.apache.zookeeper.server.SyncRequestProcessor -- Shutting down
+ s19:52:52.528 [SyncThread:0] INFO org.apache.zookeeper.server.SyncRequestProcessor -- SyncRequestProcessor exited!
+ ç19:52:52.528 [ProcessThread(sid:0 cport:58204):] INFO org.apache.zookeeper.server.PrepRequestProcessor -- PrepRequestProcessor exited loop!
+ }19:52:52.528 [Test worker] INFO org.apache.zookeeper.server.FinalRequestProcessor -- shutdown of request processor complete
 Sending request for chunk 1
 ESending request to: http://localhost:8000/v2/models/vad_model/infer
 Request JSON: {
@@ -420,14 +420,14 @@
   ],
   "inputs": [{
     "shape": [1],
-æ    "data": ["qbvJnKzDJXw8iSQpU6HJbw9yrNXJ+u3dQJ8wZUwRLpeuEtW900kaTIKlQ1AUTRcdh/hRXi2wjpP2aXB5YXTG+I6wIju6422pP8JCwZ55Dv+vvI9jkPFcuVSw3Gy5E9gzEQMNeuy1k3thra7DO3kSR51tPf1kX2gS6j6vx5g4jKnBfRJAYnEzPzY6lG/IwRCicNhqHdD5TNrqWdLVFXXcG20OP6gQ7rqo8wlOJDZLQobJJJyEL+Mzp6mN8t2dantXqqGfm1mVmNwx5BIjDT5Ke00hoeWO8jmhIg/K7W7gn95Nt/G9lZxo22qfxi7k8QstJKBZyzEWJghyrEdzHSqs0PIGAfSSD59/gJnPAOo70gp94/gKDoaZc11Nc2wR3usPeDRlJRCreNE3wPLYYA2iDQgamo1QxiPVyAMykgXc4dODlJGfRIc8hbYpeGwdYtIBeus3BNV55AY9rEuEiqPga/kAaYxWkhgvCz0a/wl/Q1kNFVmpsQSlnGoeVKeC+ubyhr3HQuPaIhekaoF+ooDPHP0VBIyp/pPAou1ZF6fj+hoYbLXTe6pJn9Z0Tg96Oc4MDOzL/7l1DCBauXzMAuV8A2MRMRskcDzcWUj1mLZgxmH+3we2jwATUK0NzdB0ni1DXSnJx9V6l1nJZOqDkRCm5x5iiLQNoXKc2dMXMTCw3+vDy3FA/IPcACfV5AvXlBxfuPZa1st2o+fAUn8kP/EPU5PgSgz5CQLCV7g2PmqJ7ymdMm/DkkHlHGi/A8H79d3XkGRIZKB6o+ugWX76wUhlSKLHLlTisze5e11ddZTmHrTCve7iuy0cGC/ZMRJkqh6XIKFaJm2VGhvIL8pqjqWEI/MfldqGLxc0k2TH8XER+g12EL/AmrU/nMA4seNBRhPRMgHgtjHbXWpC/3sUGsvZeYIJkQMDrpjz+ko9pljTXohUnmXyYkXvrxPb+uElvWfMLG+Gy/d0agGvaVGEUmVLnW6PrpWwdqpCw0Bne2tkMKbcb/ud+L9Q8j65eBwEiUlaXGwE6Sl2FaxwCItrWSOvMP/xtuw+NluZqf+zARb2SAo+gcD+zSMLwSGiKyRy4CW3hRAgADNzrvwXtUaSgZXb4PWSDAAQ41mmO67HsMr0Wa5mp/be9dhSU1Ck5ecX2EIYqrNHslwVnRkNJj8NjGqQBBjw4JrYMhseRBvpdftcYRpIJ4F/jWTbHEYUKB12i2OkGy5gQeEnzZiEq2QcJOjKbv1Xu2hz3bOqed3RVli/Sw5ta/5QS331e8d6RrHfqGx1vdrorFPaI0igGDnTmbr1zRZFx/oGKRLrZyPgQkrQh6q/g9WbZ70vIJb3bZqy/L9ZnsddqDM0/HXhJHuh2nf4Tf6KbQBZe/jUnD8vsrCe+ZuSW0E3qW27R1nk2g/W1wLNucAUysz1B1nV0buqtnG8/gPCExp07C34FD3OVNnNIDvz0f8g0yXe8snDHCR5bXxUBiHyGFBiLfn7oDLKVLOJe/Scwd14FgkE5gdqDMJupmA1IDO6Mj4cQx7JCnAJhG56xpV+cDevUUz6pcsl8EXoFCwVHHXAngS4L/aKfJFUJPq4OniggE7HKLqDOblzFfzQDUBfsNQUs68DwTxc2Bi3Bd+Y4jA4NLS9P707OVIAERT9F3U2/TV3QhV7nJebup4PkOA1ZDi8xBGEjS3+pigrGKSnIjr9/nMzAx/SnfF/kCA="],
+æ    "data": ["ZsEwcnkI5XfqL3WBG0fK+FZkH1Is56/kJcmnaYWQjNH70jolmMHSuwkknPNPfD1ezx0OFtHkr+ldL7rjNQktnIB+o/9jtDHHevRFXLvrlNE7yy2hPdYvkTGG4LU8HU+FLVq/WeupZtvsee7DQ8h9lEYZjfQLfxKxE0+K9Bgm1Z0/3uRQ+T5joLBoK6WeIS1s3jLqjcx9FEBVfZDcXNMJnnghnbmGJsHSPaEG2tgqJwu3xeJ4hjZJ8bBOFHArWQV9naV/W0E8E8CsECJv0tA4KcgWcH8xjVo5wbMw4sHuGQX3Mws7DGdW1DwhRxa9oJ3fzCYh8TlwFQWHSEBD65zhINPJDS5/S6wuz7pDxKP+i+TC5sQ0/zINEOfcuZWJXMe1ApVtN2TOyQ5s0zbg3quhrm58dlxYuF8ZKI3lsROFJeJaAGUvOWfD77uPrkyfnepd1pY9QAxt5Ct4auwkEYtTXjLQgw2xQiFQjPM5fWgjfIXF0rQ3WBJQzmWzBIaiDj2R6k4HwjM1ZXpQIlC9kl3elUsvaGdtWBc3ZJy8kvY5XKJhiVvsWn1sHJ4vr8fIA761OpLduu5IGo9NqKXB1G8xdH2b1+RzVlcfsH+Uz4p7oEurXHkQdoFi5dyQ4uAVSpL7pwwHgAJb4Pzjt3Anqz6UWHgPsdAQPn61Mr9ZxCfoadlMPBKqPbdNwjs/+cLUkRcJv/89Jr0zQslTVI79io3EdV3eF3mPK2YM3E657P+Kr45lG0JR8jr8zabBYRVWkEAc0IeJnRffE4uSkoSp/GfpaZC9kBsXymAsePE/xrSXPsMcS90nJgKfBkpZbW7vNMDJLJONSAlAvZF5/3dDYCprOMFkJnPFQKpzl1UgANDCoIpoj1P3mP44ID2Bw7AujXtmvvdmpCwFW14u7seM6u2FrDbwFVIKVS9rvF4+i4LxN0kZ2qyWTIpX2Goe2VNcNOfMzlLtkZY67DvSOlHr1vMs7ltxSzxHvoQgyOZreZucc04r2IJS6thVmsBrUDU4ap6REZ/EdfL0rW5sTQH17uvSXYxZS22m5ky8qYPRBMmClYBMvTIfWmqAqJvu2OXxLOfv9axEGN/RzU0WafncPzIk6iKrRZ08lYRIPx04+ROGSCus+WbQnboc+3P/RG5k8jczK+kkg4tJ/2pmk0T5F2D1a7wcPKxdPYZFj1+OEJTQlbEExsgC7arkx8OyVA2X3HA1dR1PD48Nf3IgoFBmQ8zZ68+anLk/70ZcLFXXrnycyfTqsWVbGWAs1D0ubPx1hZOdsRd8Ew3x6qgaLTXYh9ZCaXHTtSjSJZ/B4rXtH0Q72sdToF3uGpLstiy2TX3MvZnnJ2OJwggWTFRvmpkRXhryB2K4O2He7ZyGpLVx7zE4IXFq3gEi+4iKZyn/PTWF29xGEIAPiQNcBCjoSv1o9OQtxV0j7mRfIiRmuF8N2Q2y75WQQO4G6EKyfwKQ854ic4woZ0Xkyt5LPymnuIO3YYrItZ0InGoeusSlIco94SFI/Ju0cRGXlH8ui+g/mGR+mDxW9FglHe38UeAWKnAEJ3bon7LjcdGRYu5XTa09bXU2GpfV4FF/0KydddgcNgrAAtlwlulixluvXPQQE3MO7hLYsoZKAtj148P1ACzIP0x9Vt3V+MBPafBxbExGZw+gr4sF0BfLXr4XxCZObg1UfuU5c6vSA2epCgiYgddweNovwdM="],
     "datatype": "BYTES",
     "name": "AUDIO_CHUNK"
   }],
   "parameters": {
     "sequence_start": true,
     "sequence_end": false,
-!    "sequence_id": 1741500850681
+!    "sequence_id": 1741517572634
   }
 }
 ŸReceived response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
@@ -442,14 +442,14 @@
   ],
   "inputs": [{
     "shape": [1],
-æ    "data": ["6Alui81o69/pxsQzHf4UwbH5vj1MBqrOD9FnBr/Bpj9EiepKNr3LTLPb34V43LshVJUJMJN+Jaqf7x92QvJYaskT4AIq6LW7iXbcGA36EZzCCqTZMgn6/L2zTPWK8/0H3XOO1U8+fbb5ovjfRabPSLWPgEa8WPYpl2FLMPm90sGsbawZxISzOvGFgHIf2K3l6avXLnajOS8ACQXNx1a/DaSzu6OYCxPGRqbKFqsM9AGg9XaD2+UU5+3VlrqBFlSH+eo2NVCYISswxUTYkHVzgh/eeika9eFp+vCDIoY/uWciwMuMZSBWjsxGEySId0nfL47FoZZhumvj7xJtieSKCloLEwfDU0vrmSoFlt54A6+d0sTQZSk4JAvWuJwSH9tyIAV5e0z3yCj7k95V9//9K7oYWVvSOqop+KSzHv2V1DC3ikcFUw+uEbziO6PGIRli23rvFdzGZqzUfDYR+VO33aZyBLUi2gWAhluP9FVAHJza3CDTtGMlqu5MyekJ7imhOvGVunSa0aZqYPtbQxljeZMYaHdD/4oENxS+WAf6GNj/DN90+zFRrlw5C7tBJK7NaDrBl6KhUeHGsd1AHNWeAksjxvfbi9TFtGyMrJRBMA6+zUMRn/+1XVRFrpxKuq2Ts3zXBS3XX2WupwrylrgzmH45Cvg/3RRqwR/1NOIodhqU8fUufZGsuOs2sKA1hvCOlSz48zZA4pWNQ1YeDpvDgouey8FNYVEU7g6NP3P7bWd0GjKicXJkr2B1Mw5IjMnW/ajsgZDAGuWgZIaH5KuJepDHV9qN1NxdgtwsueHPGgKQE96gL3fewM3VcHszrH0e4+XTxl2ACEhjM+WXezfFkrCickyI5VMfpSEXHZ0ggNppwdKXZ7si7BWI66CPictaC9EvQeoeu8g8cS8adBtWQKT8sThnOdMJzYzswOjHdyEV1KwzGtRcNwkwgWqdy/PYGV3718wusmFleI0cJsY/SYWwHZDQDS0Aa3S9/hP7g1rRpzxCNjNMmd12knE9EDZs1l58Azu3GtYf+MtNYt1wD9mNTgj+889F1qkyP/MgQXbH/wF+efjV4sugjsQsLkjvwqjcKa62z3oVubu3ZeiSsdwg4uIgYRf/d5hd2qiflGshh0CFhKvAvQbz5t+CohqP2hB6ZbjiscsP9r3SHpkGXBDJAZ70DyLqN/2Bqo/96rFPRGaoP5v5y+L1FANsRYbGq0yNYyMhdmXYFE1RoZDO6QfKLw+jb0lpJsJZyYTxCHmUavWBbd52/ULfMKYmooRWmM+DV0t2sTZxywc/67pDjHBCzW7fmzDubcotml0+YOLYNSd7jzEY40Gx0xk8jpXvaBdx1L1k7Nh4/abB2Z1DoGE1GBA7mlgHdrrkGaN1wg+pvE02/i0U6CTZ6i8C3DFeFBOQ2BD6JmXT3ZTbYzdag+QR+ajL2Hr3WQgbnpP98OqT5Nb4Q5bGOoBa+eBQRORoz48tQQQFsluhINZzHUd2IsVkG1X9KdoGi+C1LVb2Ksyh5PpsurNXzqjSRPKD4xbSVdjA7dkw2XZiSdzd8B5A+ZqgvcK2uYUYwqpsdHzatuo0AtWsaAH0QVrg2rax5RQdefKv8fEBzU9lYepxFVdwRBMooPuwt3BhLDu7z7/2vvQEdCVoGqBm3aq7dbMsPm1s6iaBo6nvym5yojMUUgHFlYQGxPMTs4QS0PvQ8vYU7ZI="],
+æ    "data": ["gI5eJ0LLFXEiiEq53uGix5e4Cjz6l/esFJvclv12Dk7ntJfyzBExhgM8gIBIRg4K3bCKELMRluTMwdT7AJd7T1teOPJb4bT9HIvbvmvqRugC21BkGsve0VeB4urrjho+tEesXCE1FdG6Zdl3S9AqBlTUypLuu9Ckw0zM+lxZaEbPQ2NGBQD78M/r//jAmn7xYCyH3t4ay94FndKBBUtR4w94lJYh77+qcj1PjvVTSYd66Z8LEMjy6nVJjcQrwfJF16h8FUT8rzdd28t46YNyNTgdQRabh+qkUHDrxCkgdLkRlmmCcND6mm6XxBrxlpxg94i9Rg0MaBc17xf96yGRkKpnJFhd9n7mJhW2XzSUdXtVUuPg5dBvo6lrREh0dK+DEyqNZvXc2Bkt2u1/LiT4CbXHgvAaxUFQk+ucuViomafCWnmw1qlfEszuTmIu51bgvjRZQZLFQDvA/eUnQm85Tq+EJw3T2/ltcQ7aCNcbjGrcxtFkrOde/mByh8JwKusz1+zZ5HO989UvaNumo5XHrr6BTsS3k9hqh6MFGzLJRFW9TmoAcKdB4jvv3zlbAzUK1kPrInhvSCWtTSusbvdpquSo6Ms6E9iocDvUwKCF1Fzc2uydqBhehy74ZQ4fnEfOVhmXnHJ9AxjM+e52ZpVfdkwoTi90r8Gqy+0Wt9GnUEkgytSCbxjqbfHsSMpzOnQb41Ud8vsw7qcoxdpWJzOW0NPtyfC8TqF6pX1EIOWRgOclGpvs1KEM40x5CalW7VRLBczmBpgVgd1S2ybcqaQopdoMTvCFCBq4JBLxzKfaUdrO3YendA+fGYashIYFjiB0jQt8NA044vb/3IwP+GKgbUz6UIt5fpswdE9kZg7ytDgMrrurW2qZZhM1u2I8sKuuH5MRcAAHKm5yqjdXM8R7XuvKj7nUqh7499sznfZcnSXtAEQkF0IAMnmMDymwXefsAQw/2dEQMWUn4sAEwnJ7it/feaEDIBTRqZ2qYhzktUnokln7HsohuoQffJLNuJcjInxHoLgaVBrC30HP3P92yoGtntt99cyu0TsT11hSKuxoToAQYzhDpqu+NNyt4qFjbpo0VSFN48I3R1RjOa0x/2SI1qjh3SLc7rD2bB6e9ViXXWTHM6HOyMHihB9ZwPFrUrEvUUVxlII6aOB1E8od0KakS/FRIrvp4fhFCjearCpsUkCDVszcxOCRxmBEe9WLirs2Rwp8jzTpBQZuYz9uYXazQN0OfzPRVyd4+LuJAuP4kJSoY7/deJPwQ7oE2QWKM6fMChzix5e5ToZaWieDPOXKtolVHReGenIk1FMzhlPtZ0DYY/llvUPL9zhTxqf1DevPGExxjOafEBzgHoznSvGDJL15JuWH2f3Jh65Pk55wg+GhqZsF1eWjrzxGsaRvENp6aimrymV/dWGMxqn75M96jHlBrPl6lHGNpEFvbdogpv7x8fvJteEPTCfMjgRbM2H1At3csXza04A0mE9IhXmdqeuF4gyezKn2GkOzLoVn1C75uFvhd0VyAmBqp70VeRsQl0pwbRazXzgEgjyVP3n02wAE5ntgSgpntej15UIAXmZW3MALxCte1bM1h/OXPej8qmUy1ZbCx+6w15J1EvXRQAmIjOnnb0Jbmtw9La/KcRd+dCtTKWctN8QRrR+xv29hvdKKdW3cCvkBS79SEvuSLU89+jzzXI3RJQSZ6hs="],
     "datatype": "BYTES",
     "name": "AUDIO_CHUNK"
   }],
   "parameters": {
     "sequence_start": false,
     "sequence_end": false,
-!    "sequence_id": 1741500850681
+!    "sequence_id": 1741517572634
   }
 }
 ‘Received response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["NOSPEECH"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
@@ -464,14 +464,14 @@
   ],
   "inputs": [{
     "shape": [1],
-æ    "data": ["dJeH8b9PIO8vCk2UOoYMi0a/Sxh0F+2/ueEF8nk3sbSwAn7QU+Oz+kSan0hX9kKbG+S/GQfqRyJsOxLwE19JiGImVpE6RZL+/MZnMR4h3I7Y9wK/StrLd5EFZkPxePqMj0kpZjyaoE2B+fV8G/P/NNfWN6LwTDK/+BvVzJnMOdYFoT4ollug1WTIOrBphAG4deN5fGBOHXMSet7nYXL209HDyd158fGTGcBxojx3OQuSQr46NVVZkHYLa3f1GStlxi9TmIgdIFV4uyx7V6Zd3RQo8NG81KTYXgxmsNUgcvf93fywXjV+4T7MQciWI7ADZDOauHmf5w4n+tBN1PiVU0/nFBwGLWP4irNdL2aGn8Pv266kohkE3dUTNeya3lf83TioiYFxy2Jg6jw1SIqyuabtQayiO6wujGqUZCPg5rGJWAdNRJNr9Sk6zRJS/dhdfhVFMJhk5A8YgjwhPjPBwXo5b5G3wH2RMeW5lq3+e07xfZkI1fwdiWaBHJEQ3PlHnCBINrcQ1BIoXySgGI3nnHx7CEFi6BOGCfOAEI6jHGwdmazJFJ35oKKVi9VjZedOH0n1VnfJ0o+2FVfYBl4q8fJ4KnwUbWwIl8gj2fUwsSrg1NlPBROXBci8WceXgWclUPXvlO4vOpjj8iBiRwR2q0ic4DAu62qLvcDJIrMM91szx9bhUMeJf8fCtVBnLTWu5JgtWMfdrZi2/5O+pLx7n9pf/9raodvNZiLJCHZSqv/FPKj43V7wa/vtBlcFlDk6SC3utaHlCghJUKQdKuBwdQB/WIEtHc0sdbZ5SEWxcQXF7lxwrWpZu9yHG59NyLalL/ioCaokqq8z64Y7KHXyLlwZMu97hRCX7jnzJjyQGKLvDiD0+tCLIuXFvM5F+RVJW0xQqnuhgFw11YMbaK+AU2A0Ytn6j2PlZPjkwIjWqAbV1S8Ck6tpZMge3nrZPSQ2qDCPdTZ0hPMoDUahsjtz+SNHdEiaTBaQoxry56by9j1wf0zCcZcnj9BXgJXUU14HXxnwuN7zszsmhHqhfnIwnWW8DqAjTSpTnnXoVtj8bw/nYcgcn7GxLpbWroAi7rz/uB90cfYkcGr4XYEj+M0WZeCWqpWR4S+Wm+X9G+gQs4+fCsLTSb2Sb+kC+ABFboBdsWNGG16lyszBBVOwOj8pwNKj1y+tZclinYFCWiE79CeDjX2JIi9JEvfEp4EVJQRtDoQnN2qRMjfo4sSyxT5sj8jn+7nt2/tcEjPk+YuUmFeWcoqA+xnps8BrHeS8duYQsVgpCEQe0x1Luk/rQbQ6aa0x/WCNUY/Iv336HWZqKOe27afKoTh5J72HFALxfRRuHVubzIXlOQCiB5ypdhHvSRIA0MHux/jn6IOXnumM3SuzTGmE95DkcMyF4kR1CsUjRWncNg4eussx26YIizxO0cAkvxUvn9pgxJINwz0h+e6Qx7iLVWzh718WwSnLFmi8ms5mOCw+vd6yB4yDfiVvP3zSo0cKvldBIMP2wrSS7X4ZH7/oIKERtOasfzk8EUW8VL8XQezCCMWCrChh4yKj2RoBdjPy8oBtUnrWcE5/hvGmtaphqmkfDXqjpCgKlDMg/7GrCLsYNK8LaBs44XFob8VT2aRqSkvOYNdi72+70RguDpGUTET1rsvOYFj0aMchSkPtXkPhWB9xvmUDanXx847t0ounVgF5cljmjtrI4ac="],
+æ    "data": ["zCck5PGkMBl2lzTkKdVbQO5BNDDB4HAxohEA8zFvTykNX1y7TvjW8mK6n0NxuhK/iS38fXXkCrWkVNurrvo+wnh7teAJqbZJatjuE/Nx6Tbwkb4jwkhGE6yJYhil92VEhYDoFnSEHh18GRPl1GyzihAdwP6D2SMRazU4M9OhShiyu1gclXMORispOrgJgX3FGOO7aIoFnxB1dg3NCZMdf/+A6RKovZN6LIfVn+Ev/gX6YghUGsl7dMLd/Tmv8Vd9c/ceYZsaeybbZwsOeDxYRO+aqBBuaPfGL9ddgDzvgJCV9dskkZVCILQkM/9Fkins8Cy7xTH65e77ob0uv5a0j/PtTkhgP3V02jw/gI17IMo9k/nmBMIG5krZIjVZ68Wvn+vfCROx2tyT5TZr7SeRudpkOXL8Wpkypoy628FWFiWsnjFQaF4k/MkqIZbUgsXTDaohjSKyfd156IU3vmd8RrZ4h3NSuAIii58DGwZaAaDiQIYv8dBovZNuw0uw4NNlV9kiPngfzC6KntbRGtR06KdRG+Pad/i2qr4WXQgWEcyzSmnFtKYfKZwakY/9NpdlcNNyRcOIrwDV7rDZzJzxZ+3N5WWWpS07Pf+tP23+o2aUIHblhEElkRF0+58USaTHrzd3nN8akBgJIc13f0I0+y6bzUlpRvGcvJqHW498AuennD2vBt/cQEO+Ubcabi7nnWHoabN8HnEdj0Qm/8Q0NQTOGBm2plsuUo8gH3pFhtcEE5anF7UuBtr1PZq4ytz1/eXJck7ViUM+Z98PrjyH48ujZGM9JvlefxRlBiWPHstK5AklYB9WNTdkWMcZHqNjHEI0mkK37SX+iSaHRPsix6laJ4cy/T3DD7Dix/QA/4tmSrOWNhqHAiqXzlklvu3cWin9LUDttsm70PKOy484Bt5LtKWftvXPO/f93257oOmkS1QXuIaNHtWINOL8nh37+RyQ6PVjTTVNSLFu2kmF2E60Ag78WyQyHUjQxDsTUJr0/wXVJPS/HuADnTK1gXqVJjpZGyStvCPzK774ERgQM0zXS64Njq4+WQfgKWLbmZp+lLIaeeoy0t+PSMpYpqZeRmpARwTYmwyArE5x1d0056lnNYz7Btl1Ci4gxsFaKpJoufGpU/JIrwFy2OkanYAXg2EblNyaWHvCz6PkTpyYqv5i6dS2QYfe6zPKiMzIiiXnZQ+sA9bGqvqNPafYEn2rlhfxmt4JiRAz9O57ngpSFTbLdOyKQlQhx6H3noptofWEHkHW7te6NTIz0ajWtBtv1qap+0FXQkfkxKrVZHl/sF/qSowBvW/dI9ie9M3AYPSxKZahKdoIty8iaJ25h2/+gr2RU6JY6tymqXEwcB3sbLIMG7b5EtX9KtYAXLEkzdiMXkNJUbOMeUBW/nvCTQTDTA0xoZvNzDh7/8wCyB2MHuDcgigF6Tim2QzsblhXuubyecvrsCy/1WxfFAVN2Pd0JmWXoaWjLBs8pVZf2wC4GaDOz3AITC0pa4q6yeT3lhfIJXHjjmXh7ppYPaqKYCdWUWG0lSyz1B6LqBDHBFVtmXZDNmYQpLvdBwrg+LW6jXyGHpiS1JclBQLG7rF6Qxbno93JafGxkp38Hk0cQ7Cz1cVV5Tlx8E5XqbN2a+QocY4FI39H6HlbcdPnoT4tvfQ+GJbR36RWynR/dyKjN2PabRh2aqojCYCwT5i/1wAHkAg="],
     "datatype": "BYTES",
     "name": "AUDIO_CHUNK"
   }],
   "parameters": {
     "sequence_start": false,
     "sequence_end": false,
-!    "sequence_id": 1741500850681
+!    "sequence_id": 1741517572634
   }
 }
 ‘Received response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["NOSPEECH"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
@@ -486,14 +486,14 @@
   ],
   "inputs": [{
     "shape": [1],
-æ    "data": ["j91xjcKYpixMjv5o6/OxaQ2QZJKCErOXgIBcTruQiLkz4OjuaaRAEHZE+FLxXNNjHBp7Y8gectGdpOenEmFAVJkxseMrq60O1j7rFBS5UdwxIcypF9mP8xKlRB4w0gyAaLVRpvJBtq85ZDvW/DH/wURIYYdC+PsLTRWxT7ga4PgMMZo9GjaxCc/cgtrnoLfFUuySpND++gZh/HiVIQbp7jRATKfzpx4drFprSidtB+zd4Ps9e31IYYMlTPI3OzldUlk+HkL1m01I8jcGorpfoGs8eBGzJU+CjgC96pvSfSse4ioLwHN63ACDgTFQ6DHQAzWBOhmsYF2AEostPj3EbBNUnSOa+4LIkq/n1cFejEWzDHgGBHsXLPv1mkPqeoWS8XCvdu9BsJ2lZrgwlK4SEgwOson/NExvxeu92bmgcVg5h4irVgPqjj/7z/0B/2pcpJhXRkkHSedI+6qYnK+1grTG0IFV/gqrTc0zWFDMekuTPWiGU8wk3xOjy+nVurVF7aSKuOu9ux0egimXYPYMHPbrdSJG/m/6Vxm+eX1edVOyUQTcBzTsM+jMzOQhH7umcC3pTnp5na9qHK/D/4UoGJc70x8OJPZKQsdlKRpZNL2kcuCxAA/RvEhT7XKbgqakcqQLVlldsuio2QFN5CU7z7xv/HMa5/0vDT5Y8uRxuSLgRSZJtMUK+vszEb+sxPQ45YirNr2zfg58towTQvSDdL8FRjrhM9Oc/tUKqrXQY3XRTsbaFrORQ3sA8VFxM3fNsrrPCRMa8+jaJ1k31C8oMTMLj8oCgmJAlWoC2AA5k6igAIaccwAq5JsiEc7yUN7iRl1mCpS+i6N2foYX05TrfDUdm2Ofz/gqsAg2RY66tx9H5sark3o6UXPBgXeiU6r2YPRqiibreeBvrouYOOkmXPYFWl75fV2g/wQWVXhFC0jTDM8wDRwyJo5SOc0XfrgpGac3w3VZiqQ3R6pWNJQJW4ekPkVNSyS0qwa/WWS9c0z6G6PW6kiCJ1cj/toLqrlJNdUsBlIMsijGp/+S7VxcM+QK1zzu5YCYQ9IKIARoiYjdyFbuffcST8JmYVaTou94qWqyfkyqvhL/utOXe6zgmkP+89Oj1Gzq5+BGZ8zSthEfj1hLgkLRnzeTiMOeKdz/bZ36To2V1opjyGK8Iu9IuJ5FFqREsNMFuA+b1/OLHEIn3OkOdiDQkMQcqEexxFX3hAEecPc8gMT1JKpd0PDjun9yzKSQ6vjKf/PYma1KlOuxGO1VNjymX4PXZAPirPulSR9lan9iDwlt0PUg2lCueAsQbOBRnqW4nZzGx6diHJmbPLeb3CqDlkmOD6cSfoM1+/cb5slS2gOgSk/C82jSTlJkXWyzJCTOM9c9JcOeXcXv2OLg1noh2pCZGNJvgRj6jCRg3gVKuN8wLbz0bkPwrNYvSWXha+IBkjPrnBXfIgUsxH5kR1iCb6eCb+Yprz3zp3o6MAqCRc5wVbVotnwUM1oXHObiSgPv5WJWzx4Wuwfa1JpSo8KCXhj/BIR0w5iZAGRBj7GlgG2aqqWmCixOeO2jQ9qyTnKaHbRnJEiBm8xOVmnzhY8ZJlrQk2i/Av764FM5+HOlyIQ1zNHbfS+Z4zYFBW6kvHRAHr0Uj6I4cTC5IywM1LaoXrlTbwgziUG18AbtV0YpURDANAgYLXeTTQICli34xXUjKHyA7N1xZsM="],
+æ    "data": ["ippM+sW5kWgmTQB1On8qcpyhAv7C6a0cEdB2CV971CauRjDSXeFoPWQ2PqYJv/X3Ex0E51lNJbAjs2vFfz5C2Bizwyasv+TfpBtnhJLwxblEYchmcgfTBXKSNGWqaftL4Unj9CSUGjpzfPPVG5RI8rtMg10JWL+bTCR1K70ZHiUn81+r690gCAOwD726Uqt+RpgYfA6Gm/fmTPh6qc3h8IpRZ/ZdHszfq7W559zEoFp5W3ta5kl4JNh2Cm/1FJLGsQ4H9IhrUQlklZjqv4jHxCuhyVPrB+8XnnuW5jqOwFHDNx0Ur9K4EU5QLy73qG239wuW/efaR0wZHMcBpjVIeO+pRx7IiklzKWFNaO1S6ia8ihGMnW5mRAwJL4h6A/ym5I6k2P72WUvdzN41W90HpB4dBzlAqoe9oXu5q4zaGpFZ6XWSL3kt2PLCfQvRHjiWAqjbz/oqGgrhXeUixsbi14Yx+mVuFMpkGM5nXTMUjT4W2gPVZ447cD8DDaOli92gqQEMXYLf71uhlLiROdevGUcgolsXjaRtDnG8WbqCwJqD0lrEZkecdgIpDAru5E8ESKo+gA/lDXIGN1giLcr5UdjHTuHHIcNdVurqUzK0xLoSf8urSBRY+MPXlts1w0T/84zp7omPJ6La9KBZOJzb6V6hZjYv4//lRsGObqHg3ysfQTa+Q69+oHIiYz8ICwwMLUSMvSS/qb9y1VrPUsU9oC90Gpe+H0bDI5vjcv4LjLtBD6uF++TNkJCCl32+sksT9zKa/nlS+JaX9bdVSR7/9qFzTIt+W89bzGs60W9Hp/nQI+HXKK6IUJznMtVtW7kTGRBDfOi9B4e1oYaugo1dpRizou0xgVG5pYaTNMLt0L23JZGta9aRAsFqHxIpWQ2gsE+jUS3E3e5HGKxI8tZ3c08c+UasCN3Rxpt7RCn3hsp8t3wobaw4CL1yYmZ/Blhe+BZqSUKMUzuCgDtqXStDVudT72dzDq19Ze2rTzrA60qNmLrJOnedHxVUI5Uxf0seXKZSxnSQHiNB4eZ8zVIMwy44Y7WWmErhgkm8byfgbT7OxPaZ3axmoHe5szozHjH+vGUru8ki7dQxJN4bVo7VCDHmiK/LhF+W0pOvNjrqGG9gPvp9PCbvaHBgo+LmWmOj/v7MLpGChgo+cbI/CI3XMwRxPQzN26wT7euJ4pU2X6ezbT59NsxgRk/2cjCT4YGS2DKYsku/nZ0+bsL+NRBdF1G3aa70hQsTu7uxNSgO8vnPQ8yk+3mWjFkh8PArA2/g3FMRervkoRzbLk7j5Rpesx8DD6QWnW1MHDrbhPLV/uTfim/gqxBjVC8C59U+2LqOxZM8vkgsjTDG4NezlsjoQOVfJ52d18Fb1y3o8HsVJVn/EJt9M/g6kXy544s6s7EPAY+2SZsvyF0agCijOSfL2dDSH2XqyKEWxfy7jJJ08n5HmXqYZIl4P+O9eP7lvRBnf8JoYXZY5boPIG5rabBSYFDhmmHp8ha7P1PG2EQM5+IYv9vqVR3LKygOJfsd3qy/utdpU9MJhM3gk7Of7j2TEukRnvH25MH7xe80UB6nNTumNw/4+r0T2J2LxwHOPV3TBvNVUD4+UoH+g6cQcpXA/DlTjWrv44n88F6XEqTM4KLHHehuBrRBW9AIy0s0Enw8G3BzhXOXJoR2O4sZg+f6TkV1o/Ka1/JOmrOFIBC0viY="],
     "datatype": "BYTES",
     "name": "AUDIO_CHUNK"
   }],
   "parameters": {
     "sequence_start": false,
     "sequence_end": true,
-!    "sequence_id": 1741500850681
+!    "sequence_id": 1741517572634
   }
 }
 ◊Received response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["ENDOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
@@ -509,14 +509,14 @@
   "inputs": [{
     "shape": [1],
 Í
-    "data": ["bybomGxISpqs5FAMCv9TKLtROfSlAdNfJYQwt8kuRMYx93K0Xn74AxF5HFscT3BnMnoMNX/owI5j0B8hrBIWAawkXbAllXR/EqG0bEgO/xWamwPW2jgJq0L+Pxg/KgNE0Zexjgerj+6mZ1jS8VQwmPjm83Om7PVHH1xYQKNKIl7X+IoFO2ZWTqnytB6Thm5c1Xxo9ASRKKl3narMTLG1obvTqqlufzZKW3tQ9TsgLZ2+WTc2y/h9xGvbRG6BOoh/u8wgEkIcWwnh1iviCddSJ8RSFwIGv8U4QyVjjd3nStPa5PNgy/lJmMOO3LO1Blm//CFJNHSZ93HnoEKq0baswmDO/2gQZwvIbImhWAhweij/gqVoB3vQ3mg7CCwfxybOV1F4vZAPZ3uuQjQNXkeLImxfooplhgHvdemcVmDRttcPwMRTupX/ITuUWAIrk1TsYgshi2rQWozmd6GagO0BcZp7pQRz/VaQLQ5tfHPajPkGkhcmpPKb5DXs2/Q9qZm3UYjVJZTmBXt+333WTyPIlAMSZxLWbdSkAHXAnKtuXWNNMpqpapevmpFOnMBvQfkWBSpxLnbcfTqJ6vfTsjoycO7B8q0113zlqMF8h5N0Xjc9dT48LvW5STbfBUOOo4r5WEBaKamYJ1prV50xEVfzt+AXSIheXV5LEUBw8U8veXPxS01vb3Thj2cPd8RTHMJbqFs2ZphLuDBIhQqSV/pGauX8BZul856djIJ7ElUfrqVRXCbHI/ox/q5yRo7erchWotkfi1qqkfKvK+EIK8GRVx3ESE166UOJOWis9XHG6+Jc2xX9EyLbaAZAgJJ5l8kKUZjrKMryW+mCQt04byo2L4qCzINJlMIyrxdCy/nqhoS2FUG7dyqktkjLv2GLEDJHZ/uZiOl090EpJuVt+YWDmRmddXOXktPk7bm7TE02APhyUn5C0syqb9iCFxza0vCNy6/mmnWdcuP3QyRBkWaKqe64fZNaZIn7hQEqX5JKvN8h/IzNEIA9sJA9NCkGUBCwY9lOCMq94O7c2t0FKzODUvV566uZVI6zB8o9lK+rCMkbPM/K3d94kO3kDtJCrs/lI5cV7PkM+ZFNnO+fZrOQG6a77zNF8OxcrFs8P4kXeRcNdJ5PSDWDmXnH0d9U6OMhVgkLziaejOZxOTKJRbNBdRgwgyxXhiEURR9cXHspllbEQdgEmVwQl3kfVQDQrAsKLUZiJydIZZSOKEjNLBqKXUmRa3QrbaqMY85SJxhlP6Q4+ZF1cISDRNeZAEWR2N2lhuj2xFu6PrOzLjkMHhE9TK3Q530bCSBbx2tQnSQESC/dwDxFH4LLyVLpNc15qPOC/iRD98g6hhymebMXNhSfMg=="],
+    "data": ["9Wn9VrbhAJXSqifjmCst82U4oreLUUJpB7VPZd38zhkBE5uC7+a/f3MN6ZcChwpGHY33gUCIZKC26WnJfm/raclMufSDNw2gI4nlF+A7lzNVEgQtmN1sR+dxitQnsitqGDTIiq8UhUlw3OQ1UWqyOG2Sssb6pbwsC/FRxTFlw1z+R1nEpK7zZM+7tjuFvLkNRJpMBAGggE65+lf1R8D6c03uJzMFjwDxGCre4kMVAQ/AxTYi+oaY0CtzY6jpqOKpHgj+3G3T7PMHYR8ZZI4hwkocOj1pde4vvn8eOeoYBSlLlubI5zfuv71JspRWx7ldT33sQ4QXaON2Byjh89RLq/JtYO108fBSPoUbMpmDeZLAHAoftq3btXfDpHT+cpfh+PyC+YlYyinxBO6TRZmSFZMP0vce37Jnjd+xi9uwwAuDHkf/jmMmFiMz94KDL+mVP+i3kw1cJZKlKlu+rhr+ZX//Zdlg8bmFhKuXGw9NndZEY/yUjFA1WVLX9slvAej1GxOAQ8/jgzCog0rrvbbHoqEj/w/Tptc0ScwIsWnBlI5JF37/IQonU4cjnb/xHYQvXH9bTdMZ8vzlhA8pu1iHmEEpXg+N26Zx/a0ZDiWfokr+WyLBrhcZb6OB3PPaTWpH/une/sEBER5L+eWKZ5CaZRQbwzc5dDeYp0haFA3m0Gy/srp0XbPdZZQXGbrYn5glr5Z1+YHriec29uEo8Kt4BIjZZMd23hBYYW8JBi5CwqLlLTctQ3SYMzpdgpfyRcXrnwV7HRQjZo0eZBUrM3EI6k7hrBRyYhelwbfaotaccPMPlFy2tJ0Ru5qOqJdDuiOmh3980rRZ2k5+52rwNlKpnygMmlPGgd8fi4V/tdKckw2y4e5M5g9DNUdGe4P7hhl4/aMuYDCEvAoINmzv5Di7VPQ37WaU39WqlQb+sebxj77k1LVeyRXx0A3MHK2TTXXs9mWrOYEq3jIHJAwjC0ZFwPr/DlzfbZlJ+iqnbI2HucZlb5ExJYxMjt/j33hQ6fe6nSIhoLJkJEsU9tqXlB8ttHP0NfEq3Dgyg+Vu4vP6V3zwmrCa9h3jtgMpnLH8yLiuU757pe8Asir9wgVzAap9d1r8eBZVg/NVUkDI/TDwfY7AWyQGBZLFV3xBh8jg22MJB/T8EOuODyrz8WfULUnFN3fNaZa0SukF0RExO8YioQplPb4xyGUL3Lh1L2cErsDJuEJx2XdMMB7zIAiMPwTZmammz79yQgyh212P3l1NOrfJ5agWfDH2jXt4Tsmrj58/SCXzIGAvwkZ3/9dZ7yiL+3O4Yvol7+kQKa+k6r1EySl++rVhgJEuFgxrMYwJ5HLPg4A+14mIojtd6bh4/UlhQQ=="],
     "datatype": "BYTES",
     "name": "AUDIO_CHUNK"
   }],
   "parameters": {
     "sequence_start": true,
     "sequence_end": false,
-!    "sequence_id": 1741500850770
+!    "sequence_id": 1741517572712
   }
 }
 ŸReceived response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
@@ -530,16 +530,16 @@
   "inputs": [{
     "shape": [1],
 Í
-    "data": ["AFHCS5/eBj5Y9D0hEDXmDjhwNJia3Wd3JG59oKO9DCPUeTvnmCml8bqNj63brT/CbMTWsOrk3uedR2JVQso3P5QpGubJmKpQQyQDl74UkpVi0SykinQYFUDhk+PgwO5yLbJq+w/McLOjgIXTeZkaWZjIt6iAiaYHoGpqO3Or8IDOS4DCO4YSSm6FlozdSSuSDmLR4Aj/1jVyZ86/R784aGkZqlSRl4minQe1SE9AmZjKqFy+EKG1UxGQucF785C5Nz3UKUqYr+sKNz0ISiJSCVXXE7q7Dk6Z+0HDaYXncOsx/YaPEnOrgPeWe7va7rItPUQFr99sV/lSgJrPqhlja5j39T2Kv5VviIb2rSEdepCRXhHrhuizHVyEj1mHbWoZbWcRF8fsXX1EWTBB1Qpvemi6e41xCW6CBN6O4IsCIi/5eMvn0Ts6oJj/Y5fAuhh6Wi3hHJDUHbNWJDB/elqRUUeuAxgliiwJVD/+nD/jHWsF+yRWi77fgQY2umTrz+6xpVPKkTTsZZwsfNU1xEwoq4kRJxY8bkcK6gk/f8tcyq4nBO7M4heTJzgQYjFUgGVLDVZV6DNP+HV8DzFS2bBaXCQ+BdgHn1u8dDR5DwrG/hY4AWo0MfTNw1kfFNknmOa3twdmbPH5nVRBeUyNknMiOLgL6T2tSb5FxPsr6J+xhA8/o72W4GEyTeLOr2ivingev6ouKFKY3yQjYUoXfHWrVN9TOkKJez5TAB7oxbWnHAuA3CD6f1c8/oGmHuXNi0ul/zF5AJTRYxcncIQqD0B3T7cE1izFz16WC+6oa/VyblTJD6q8Hh9TeUaoAw66MJDdHpnCqG2NvrST5bKwLnaTIK1tm6Q4ao7lM8tIl8ictEH53T818KJ5cxAXcFcB9EQT3X6gdmXuY04l2B883xuKfouyfUZ9uwOzHMmnOs/0n7rRPYOPINdrgDgxVZ63OOmNnm0xxnb9tOx1bwpBTBHICsWQ9IdUyhKS7JMhMKA/GXoAypPr87xiUnyrlI/+qIE6Nn4s7eJC+9Snoezf+VxHHADjf3c9/msEudwhGMJobFtpcaykH7s//y74p0m6C1OO9UDFsVTI4ypVQZBkSCGYQ+SOVddTp985MNpEsuvTSUe39f5UakfD6Z6mGGmS7W2b8xhF1DtA4WC7ZwZgK1ksqyTJgS5mv017h6m7GnmpJ4gk5Cg4hx3yCMVmsrgqudaPnXUzmGJOEDclh+aAKLhPeMvb/cldoJDNpJvi7C86JtqG9FwaLn8n7zN9sfufGgMNf5Zq6tQtCAKWsfjdkkm238nayXPKq7TYj7pZgjHW7/eb+icnejnKHjuzdlpDys6qVMXG/u8vrSe639ivBqtJ6w=="],
+    "data": ["Xcyt+H75pVsZ80tZP5wOYEbuQRJg473p2q2KOd9SbUx2K6SCVDU/izh+1THGrjzPykCP3M8HdBLL6i06Cr/gQAzHyvgR8rQLMxKL7Z+E20+8GaJXlmMNxX/5IYLsKjSqE2Ycf9OgRxnR3HkQm7XAEEQm+HoeV295QWbi7bA3/GIEjcx67ftU3QHv2/fd5yCqTKXXj0JriwXCLmA0E6beDV0qKFdmefwiVv37EFzGe5EEXD7K1GvI0JcKkabnNLc2H1Mv4HiN78+GsKCzZEeguV+aCkAZUoQQtkNv2ZLPCSdOD/oqEr0X7euFYRMVQ4OLlE+QZUj/+Kn9HuxBjAwcbHU2OjRXgPwVAkCHBeNZ4oGdLgwrDscN1avUlnjl+0++H1xsVR31Elnu5lmrFCvtNrviphIMyt/C5Rj6ELxFmpJfzIlxb2Fh7vVY/mpF226g8FP6GlggC1oyNPKuyZgtIEmYTUIMhiCtAmtFA+bqMYyD+0om+NP+kQCsfUrUaLUNdrJef+XARNQimQ7xuVyYK4BI55pqq+UVHXvKYDv9uUqEG/Gwov8YjQdHIM9XLKKiNRRfVR/E7Z4+2oEncM8H05QesF8eglWKiJCX06sU3Bu3JoWp+/z45HuYlLV5OTQ7y50D/OdsXEkfqlEQdKbw11vLbBvXMAAc0QMKe290me7RbgJHvyuGxmnR8KXHrtUMPXXVrf9As7OfYZNP/+Zj+FXHoz8dpKfoqs1eq4ztzy28c7Yfte8fdin35dXsw4oKhrkBl603PINGAO8l/BvHYvy23DasimkxGaId8Iv4zTabwL52zJbdkUkFghApQ6SKYqTMQY1l28/5AKqHRWsTd01d4PQNY/M64ONMGnZitCEc+1lPdSTgILkriPkYir2zWMKw6LahxDreziV4G2ZJypfIpzZ11qecL/zKDRcp1W/+kHn0Q/5Ukzh1eN2ibRMDB22CbhHghhuS5rN/5bAgpIOlKYDi3LfAieJDdG1i7Mvir0XfwrVX0f9h3sE+nYKbsvM3EfY8wzyP78N1Lt4Pl2XkwE50Zmnc9eA/2G9LOdRWc1XklWtM0KxCqNdsYfnpDh7LwQj2xF7YWf7X2RjaAsIcwO0KhlgLZuD6WwXaYn4gdXkz04fTZ3FfX9ty0SFVSvVIbVPM6kDnSxg0pnkdiSJbKU4eWa/rbMlR/kNu9PvIK18To8Najn03W1FV3L4JYP/QZqSLqaTY7FNG6yMm1RhFskziKFzJG8VdcOh+XKtow0fXF8DOAqtkuC4awefGnFg9qiizIqvXVvLli4XPy4+/ePiagHQ8PGqL8Bdd8P+4XM2DRaZLMmrvNTc+0jq0alexaUh7GSrHvZqDO1a+2A=="],
     "datatype": "BYTES",
     "name": "AUDIO_CHUNK"
   }],
   "parameters": {
     "sequence_start": true,
     "sequence_end": false,
-!    "sequence_id": 1741500850780
+!    "sequence_id": 1741517572723
   }
 }
-v15:14:10.906 [SessionTracker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- SessionTrackerImpl exited loop!
+v19:52:53.306 [SessionTracker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- SessionTrackerImpl exited loop!
 ŸReceived response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
 ·Response JSON after reset: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}

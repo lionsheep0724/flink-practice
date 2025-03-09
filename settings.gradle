@@ -1,2 +1,4 @@
 rootProject.name = 'flink-practice'
-include 'consumer'
+//include 'producer'
+//include 'consumer'
+include 'integrationtest'

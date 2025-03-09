@@ -10,17 +10,15 @@ sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
-
 }
 
 dependencies {
     // Spring WebFlux
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
-
-    // Spring kafka
+    // Spring Kafka
     implementation 'org.springframework.kafka:spring-kafka'
-
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
 tasks.withType(JavaCompile) {
@@ -32,5 +30,6 @@ tasks.withType(Test) {
 }
 
 bootJar {
-    enabled = false
+    enabled = true
+    mainClass.set('com.flink.practice.app.AudioStreamingApplication')
 }

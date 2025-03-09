@@ -12,11 +12,19 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.kafka.test.context.EmbeddedKafka;
+import org.springframework.test.context.TestPropertySource;
 import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(classes = AudioStreamingApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@EmbeddedKafka(partitions = 1, topics = {"audio-packet-topic"})
+@TestPropertySource(properties = {
+    "spring.kafka.bootstrap-servers=${spring.embedded.kafka.brokers}",
+    "spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer",
+    "spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.ByteArraySerializer"
+})
 public class ProducerTest {
 
   @LocalServerPort
