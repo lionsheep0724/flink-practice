@@ -10,9 +10,7 @@ public class AudioChunkKeyedDeserializationSchema implements DeserializationSche
 
   @Override
   public AudioChunk deserialize(byte[] message) throws IOException {
-    // 메시지(byte[])는 오디오 데이터라고 가정
-    // 세션 ID는 이제 다른 방식으로 전달되므로 null로 설정
-    return new AudioChunk(null, message);
+    return new AudioChunk(null, message, false, false);
   }
 
   @Override

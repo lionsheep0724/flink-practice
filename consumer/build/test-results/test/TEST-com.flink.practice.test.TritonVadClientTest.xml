@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.flink.practice.test.TritonVadClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-07T11:35:39" hostname="DESKTOP-FTHIR2G" time="1.159">
+<testsuite name="com.flink.practice.test.TritonVadClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-03-09T05:43:13" hostname="DESKTOP-FTHIR2G" time="10.01">
   <properties/>
-  <testcase name="testReset()" classname="com.flink.practice.test.TritonVadClientTest" time="1.124"/>
-  <testcase name="testProcessAudioChunk_WithLargerChunks()" classname="com.flink.practice.test.TritonVadClientTest" time="0.023"/>
-  <testcase name="testProcessAudioChunk_With512ByteChunks()" classname="com.flink.practice.test.TritonVadClientTest" time="0.009"/>
-  <system-out><![CDATA[20:35:40.599 [Test worker] ERROR com.flink.practice.app.jobs.TritonVadClient -- HTTP 요청 중 오류 발생: class com.fasterxml.jackson.databind.node.MissingNode cannot be cast to class com.fasterxml.jackson.databind.node.ObjectNode (com.fasterxml.jackson.databind.node.MissingNode and com.fasterxml.jackson.databind.node.ObjectNode are in unnamed module of loader 'app')
+  <testcase name="testProcessAudioChunk_With512ByteChunk()" classname="com.flink.practice.test.TritonVadClientTest" time="0.009"/>
+  <testcase name="testReset()" classname="com.flink.practice.test.TritonVadClientTest" time="10.0"/>
+  <system-out><![CDATA[Send request for VadClientTest
+Sending request to: http://localhost:8000/v2/models/vad_model/infer
+Request JSON: {
+  "outputs": [
+    {"name": "EVENT"},
+    {"name": "TIMESTAMP"}
+  ],
+  "inputs": [{
+    "shape": [1],
+    "data": ["ncu0zStfsqhJZon0xD/mfz1ITNqZn/IU+9Xp+9FnZQ3COE1fI+78L/FRkdN0MTVfrDQyRofZ/xZzjRRqUAyFTpIL9/iiArw4lQbRs1gP26IhyjYrI9d9B+A87wWklExmZYu2EYHD6zkyLv+TiD6E00ea9SkuEDGf4j3lTOO5eotWp98VDN7cTifqi+a00UgpyRZGriD2T+a58zBA8qfOMcSqkYWFYAu8uNtql5snVVzaDW5jovbcz83bbbYNBAw20wFFTp9kBpWPvOUAldmXra42dwgUTk4EJy4sekVDCXvpDZ1JA4qyJjWH+dEK+s4E/835vwiqbSn1DSie/VDCEDEK8B/OQHEonS8A9/mijpKJQu5OxZuZCApKBiJthaljGwA3aRHk9r2a66grctQa3o3xV97F2tIvW624vB/ssL/ay1fLUKTZAmQLgfscoy6IUvPauzdXPw2D3+tjddrFp+Qw+wAEQiMwGGKPnLC2ClWf945FfRwNEEDVIPIh1rgfdv5gKBmYb2s1PsQ9exhlQUMyoaWvA98M89BTH6rLywsOROR1cPZh9h/yPxngURR/jleXQhc2Lf8k81La7pRgNu+VIWpeTHvEn+yx2NTajzfVqEXRs39DRPxaJvObz4FhoGHx9ywjm3RhYVKgYdif2/EQysW3cceXytYr8bQDQAc="],
+    "datatype": "BYTES",
+    "name": "AUDIO_CHUNK"
+  }],
+  "parameters": {
+    "sequence_start": true,
+    "sequence_end": false,
+    "sequence_id": 1741498993211
+  }
+}
+Received response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
+Response JSON (512 bytes): {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
+Sending request to: http://localhost:8000/v2/models/vad_model/infer
+Request JSON: {
+  "outputs": [
+    {"name": "EVENT"},
+    {"name": "TIMESTAMP"}
+  ],
+  "inputs": [{
+    "shape": [1],
+    "data": ["UqtOQa7KxEltenCAPaLYknkN+zN6Mgmc6iCa2s3BbVFXbqB8mYr5RUp4i7+m8ikAAhXkpZ/IUflYB/9RlStoxy+tkDfas1zEFt0LaLe5gKn7CI/yyH2ksSmyPlUHUKyj6LoChsntLwtzPNniOPxPmSXMB4gVFLqzAZlA6MQUU8QRE59Q77e97CjwzZJEdJ1FAu4qchr1DNjqt8KJApbt00FmtjiMvEBSnThU28xnG4JZ/1xkYSzTn8432AgK5dVRkbbJSxLzcjxi7VbEEs82Qrb2J47mMU3K/qZkj7sWadMdhElQp5LuOKi9Z5wwy1N356Rwy5mEM0iuwZUuBqIEFIYJXlWn1MpGxgA9dI9ssuSAOTZl3xRNhHbKnRhwDuGKcojK1yCHHki1FunQcMm1t1jXDYQSf3gP0nIwGZPyI0cLpj0+VW9SaZVYbXxnZIcQCjnMqfwVsn2jU4TMnELDw3zXoKc8fG1aJpmK7triUGx1ZQ8EYL3gqK312orP7hM+eN44BgDJxNFQNfFhhhOGDzx0mi1xlHOdF2rR/P/RHduzValKf2+5kpu0Mkz7RPkjR2K1AFlwGizucvvSFvAOkWZNLfLMKm4et/kWmRvssztA9gJxtCYje6E7iymTBGhbz/eWo67Jnkf2Aje8n5rNThe1fv8SqEX5hqEHtwdhvLmvZeimIHEDHs06/2WSRbsXf+aUP3jq6MJUDFMDlxsf2spSl+vPrukIV1h7a9Pb0OZuqYYQ36Mq4qfWhIp9jZcZagLOAZ9b7XPSz406mCzvoqEYjKK01DPRgEZX3YchN7bdKzvjJ077Ix/TdAbmHZiyFn9mG1cipE3CFSyHlnKqp/L2Qqgw3QcmRuK+shoz4/WPnFSynAEe27aK6b8hul+UgAijTjkyI0zw6xBlY2MMzxb6mmdNsT1KiCAytq+OnMLgntuG9mvVWOv9X5BFQJd0dE4SEKUEhTjHv7iMYPIctm6+7xXNkOxLqoWAPhdsQG248m1J1v0FxemGs/tlsRXkC25OuVdRJr/DIC1XhmA3I7ZmLBCEONakxSKv5YQQtIieA/ei5Zpf5G/95qUQhVrxheVjHEkklVkXt0QVlct0Mo6AKpT5+TOCDctRaoqVb+oACt3eLw+Pi/9WdMcHZOwISv47VcjMNj+fOu1Qm1iS30aDLfQ5AEdwgg2mnFy/2i3BKlLJv0Uwp0sPTsw+plPYO9nEJ9phcbUIdpMIqBWk2OrUKyX7PQiZ27446US+QkQFQR2te3ypn9zkm18WMIn1Pok54M/XSDc9oj/i0O7aqo+Bggn6wGvrrx9FLmP3OCM5Pp7PQvFiCAW2xunZig+ECeggRSbjHoYWpuqdYVKV4g=="],
+    "datatype": "BYTES",
+    "name": "AUDIO_CHUNK"
+  }],
+  "parameters": {
+    "sequence_start": true,
+    "sequence_end": false,
+    "sequence_id": 1741498993220
+  }
+}
+14:43:13.305 [SessionTracker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- SessionTrackerImpl exited loop!
+Received response: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
+Response JSON after reset: {"model_name":"vad_model","model_version":"1","outputs":[{"name":"EVENT","datatype":"BYTES","shape":[1],"data":["STARTOFSTREAM"]},{"name":"TIMESTAMP","datatype":"FP32","shape":[1],"data":[-1.0]}]}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

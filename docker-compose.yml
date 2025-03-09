@@ -45,7 +45,7 @@ services:
       - "8001:8001"   # gRPC endpoint
       - "8002:8002"   # Metrics endpoint
     volumes:
-      - ./tritonserver/model_repository:/models
+      - ./vad/model_repository:/models
     command: ["tritonserver", "--model-repository=/models"]
 
   stt-fastapi:

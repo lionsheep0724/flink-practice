@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">3</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.156s</div>
+<div class="counter">10.009s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,18 +78,13 @@
 </tr>
 </thead>
 <tr>
-<td class="success">testProcessAudioChunk_With512ByteChunks()</td>
+<td class="success">testProcessAudioChunk_With512ByteChunk()</td>
 <td class="success">0.009s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testProcessAudioChunk_WithLargerChunks()</td>
-<td class="success">0.023s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">testReset()</td>
-<td class="success">1.124s</td>
+<td class="success">10.000s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -97,7 +92,48 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:35:40.599 [Test worker] ERROR com.flink.practice.app.jobs.TritonVadClient -- HTTP 요청 중 오류 발생: class com.fasterxml.jackson.databind.node.MissingNode cannot be cast to class com.fasterxml.jackson.databind.node.ObjectNode (com.fasterxml.jackson.databind.node.MissingNode and com.fasterxml.jackson.databind.node.ObjectNode are in unnamed module of loader 'app')
+<pre>Send request for VadClientTest
+Sending request to: http://localhost:8000/v2/models/vad_model/infer
+Request JSON: {
+  &quot;outputs&quot;: [
+    {&quot;name&quot;: &quot;EVENT&quot;},
+    {&quot;name&quot;: &quot;TIMESTAMP&quot;}
+  ],
+  &quot;inputs&quot;: [{
+    &quot;shape&quot;: [1],
+    &quot;data&quot;: [&quot;ncu0zStfsqhJZon0xD/mfz1ITNqZn/IU+9Xp+9FnZQ3COE1fI+78L/FRkdN0MTVfrDQyRofZ/xZzjRRqUAyFTpIL9/iiArw4lQbRs1gP26IhyjYrI9d9B+A87wWklExmZYu2EYHD6zkyLv+TiD6E00ea9SkuEDGf4j3lTOO5eotWp98VDN7cTifqi+a00UgpyRZGriD2T+a58zBA8qfOMcSqkYWFYAu8uNtql5snVVzaDW5jovbcz83bbbYNBAw20wFFTp9kBpWPvOUAldmXra42dwgUTk4EJy4sekVDCXvpDZ1JA4qyJjWH+dEK+s4E/835vwiqbSn1DSie/VDCEDEK8B/OQHEonS8A9/mijpKJQu5OxZuZCApKBiJthaljGwA3aRHk9r2a66grctQa3o3xV97F2tIvW624vB/ssL/ay1fLUKTZAmQLgfscoy6IUvPauzdXPw2D3+tjddrFp+Qw+wAEQiMwGGKPnLC2ClWf945FfRwNEEDVIPIh1rgfdv5gKBmYb2s1PsQ9exhlQUMyoaWvA98M89BTH6rLywsOROR1cPZh9h/yPxngURR/jleXQhc2Lf8k81La7pRgNu+VIWpeTHvEn+yx2NTajzfVqEXRs39DRPxaJvObz4FhoGHx9ywjm3RhYVKgYdif2/EQysW3cceXytYr8bQDQAc=&quot;],
+    &quot;datatype&quot;: &quot;BYTES&quot;,
+    &quot;name&quot;: &quot;AUDIO_CHUNK&quot;
+  }],
+  &quot;parameters&quot;: {
+    &quot;sequence_start&quot;: true,
+    &quot;sequence_end&quot;: false,
+    &quot;sequence_id&quot;: 1741498993211
+  }
+}
+Received response: {&quot;model_name&quot;:&quot;vad_model&quot;,&quot;model_version&quot;:&quot;1&quot;,&quot;outputs&quot;:[{&quot;name&quot;:&quot;EVENT&quot;,&quot;datatype&quot;:&quot;BYTES&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[&quot;STARTOFSTREAM&quot;]},{&quot;name&quot;:&quot;TIMESTAMP&quot;,&quot;datatype&quot;:&quot;FP32&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[-1.0]}]}
+Response JSON (512 bytes): {&quot;model_name&quot;:&quot;vad_model&quot;,&quot;model_version&quot;:&quot;1&quot;,&quot;outputs&quot;:[{&quot;name&quot;:&quot;EVENT&quot;,&quot;datatype&quot;:&quot;BYTES&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[&quot;STARTOFSTREAM&quot;]},{&quot;name&quot;:&quot;TIMESTAMP&quot;,&quot;datatype&quot;:&quot;FP32&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[-1.0]}]}
+Sending request to: http://localhost:8000/v2/models/vad_model/infer
+Request JSON: {
+  &quot;outputs&quot;: [
+    {&quot;name&quot;: &quot;EVENT&quot;},
+    {&quot;name&quot;: &quot;TIMESTAMP&quot;}
+  ],
+  &quot;inputs&quot;: [{
+    &quot;shape&quot;: [1],
+    &quot;data&quot;: [&quot;UqtOQa7KxEltenCAPaLYknkN+zN6Mgmc6iCa2s3BbVFXbqB8mYr5RUp4i7+m8ikAAhXkpZ/IUflYB/9RlStoxy+tkDfas1zEFt0LaLe5gKn7CI/yyH2ksSmyPlUHUKyj6LoChsntLwtzPNniOPxPmSXMB4gVFLqzAZlA6MQUU8QRE59Q77e97CjwzZJEdJ1FAu4qchr1DNjqt8KJApbt00FmtjiMvEBSnThU28xnG4JZ/1xkYSzTn8432AgK5dVRkbbJSxLzcjxi7VbEEs82Qrb2J47mMU3K/qZkj7sWadMdhElQp5LuOKi9Z5wwy1N356Rwy5mEM0iuwZUuBqIEFIYJXlWn1MpGxgA9dI9ssuSAOTZl3xRNhHbKnRhwDuGKcojK1yCHHki1FunQcMm1t1jXDYQSf3gP0nIwGZPyI0cLpj0+VW9SaZVYbXxnZIcQCjnMqfwVsn2jU4TMnELDw3zXoKc8fG1aJpmK7triUGx1ZQ8EYL3gqK312orP7hM+eN44BgDJxNFQNfFhhhOGDzx0mi1xlHOdF2rR/P/RHduzValKf2+5kpu0Mkz7RPkjR2K1AFlwGizucvvSFvAOkWZNLfLMKm4et/kWmRvssztA9gJxtCYje6E7iymTBGhbz/eWo67Jnkf2Aje8n5rNThe1fv8SqEX5hqEHtwdhvLmvZeimIHEDHs06/2WSRbsXf+aUP3jq6MJUDFMDlxsf2spSl+vPrukIV1h7a9Pb0OZuqYYQ36Mq4qfWhIp9jZcZagLOAZ9b7XPSz406mCzvoqEYjKK01DPRgEZX3YchN7bdKzvjJ077Ix/TdAbmHZiyFn9mG1cipE3CFSyHlnKqp/L2Qqgw3QcmRuK+shoz4/WPnFSynAEe27aK6b8hul+UgAijTjkyI0zw6xBlY2MMzxb6mmdNsT1KiCAytq+OnMLgntuG9mvVWOv9X5BFQJd0dE4SEKUEhTjHv7iMYPIctm6+7xXNkOxLqoWAPhdsQG248m1J1v0FxemGs/tlsRXkC25OuVdRJr/DIC1XhmA3I7ZmLBCEONakxSKv5YQQtIieA/ei5Zpf5G/95qUQhVrxheVjHEkklVkXt0QVlct0Mo6AKpT5+TOCDctRaoqVb+oACt3eLw+Pi/9WdMcHZOwISv47VcjMNj+fOu1Qm1iS30aDLfQ5AEdwgg2mnFy/2i3BKlLJv0Uwp0sPTsw+plPYO9nEJ9phcbUIdpMIqBWk2OrUKyX7PQiZ27446US+QkQFQR2te3ypn9zkm18WMIn1Pok54M/XSDc9oj/i0O7aqo+Bggn6wGvrrx9FLmP3OCM5Pp7PQvFiCAW2xunZig+ECeggRSbjHoYWpuqdYVKV4g==&quot;],
+    &quot;datatype&quot;: &quot;BYTES&quot;,
+    &quot;name&quot;: &quot;AUDIO_CHUNK&quot;
+  }],
+  &quot;parameters&quot;: {
+    &quot;sequence_start&quot;: true,
+    &quot;sequence_end&quot;: false,
+    &quot;sequence_id&quot;: 1741498993220
+  }
+}
+14:43:13.305 [SessionTracker] INFO org.apache.zookeeper.server.SessionTrackerImpl -- SessionTrackerImpl exited loop!
+Received response: {&quot;model_name&quot;:&quot;vad_model&quot;,&quot;model_version&quot;:&quot;1&quot;,&quot;outputs&quot;:[{&quot;name&quot;:&quot;EVENT&quot;,&quot;datatype&quot;:&quot;BYTES&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[&quot;STARTOFSTREAM&quot;]},{&quot;name&quot;:&quot;TIMESTAMP&quot;,&quot;datatype&quot;:&quot;FP32&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[-1.0]}]}
+Response JSON after reset: {&quot;model_name&quot;:&quot;vad_model&quot;,&quot;model_version&quot;:&quot;1&quot;,&quot;outputs&quot;:[{&quot;name&quot;:&quot;EVENT&quot;,&quot;datatype&quot;:&quot;BYTES&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[&quot;STARTOFSTREAM&quot;]},{&quot;name&quot;:&quot;TIMESTAMP&quot;,&quot;datatype&quot;:&quot;FP32&quot;,&quot;shape&quot;:[1],&quot;data&quot;:[-1.0]}]}
 </pre>
 </span>
 </div>
@@ -109,7 +145,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 2025. 3. 7. 오후 8:35:40</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 2025. 3. 9. 오후 2:43:23</p>
 </div>
 </div>
 </body>

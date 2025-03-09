@@ -63,7 +63,7 @@ class TritonPythonModel:
         print(f"VADIterator : {VADIterator}")
         self.vad_iterator: VADIterator = VADIterator(
             self.model,
-            sampling_rate=8000,
+            sampling_rate=16000,
             min_silence_duration_ms=500,
         )
 
@@ -75,10 +75,10 @@ class TritonPythonModel:
             padding_length = MIN_SILENCE_SAMPLES - audio_samples
             padded_audio_tensor = F.pad(audio_tensor, (0, padding_length), "constant", 0)
             vad_event: Dict[str, float] = self.vad_iterator(padded_audio_tensor, return_seconds=True)
-            speech_prob: float = self.model(padded_audio_tensor, 8000).item()
+            
         else:
             vad_event: Dict[str, float] = self.vad_iterator(audio_tensor, return_seconds=True)
-            speech_prob = self.model(audio_tensor, 8000).item()
+   
         return vad_event
     
     def execute(self, requests):
@@ -153,8 +153,6 @@ class TritonPythonModel:
                 inference_response = pb_utils.InferenceResponse(output_tensors=[out_tensor_event, out_tensor_timestamp])
                 responses.append(inference_response)
           
-            
-        self.logger.log_info(f"NUMBER OF AUDIO TENSORS : {len(audio_tensors)}")
 
         # Create InferenceResponse. You can set an error here in case
         # there was a problem with handling this inference request.
