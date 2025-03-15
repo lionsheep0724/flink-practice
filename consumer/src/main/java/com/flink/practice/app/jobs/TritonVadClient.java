@@ -4,10 +4,14 @@ import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Base64;
 
-public class TritonVadClient {
-    private OkHttpClient client;
+public class TritonVadClient implements Serializable {
+    private static final long serialVersionUID = 1L;
+    
+    // transient 키워드 추가 (직렬화에서 제외)
+    private transient OkHttpClient client;
     private final String serverUrl;
     private final String modelName;
     private final String modelVersion;
@@ -16,12 +20,48 @@ public class TritonVadClient {
     // 시퀀스 ID (생성 시점에 한번 생성)
     private long sequenceId;
 
+    // getter와 setter 추가
+    public OkHttpClient getClient() {
+        if (client == null) {
+            client = new OkHttpClient();
+        }
+        return client;
+    }
+    
+    public void setClient(OkHttpClient client) {
+        this.client = client;
+    }
+    
+    // 나머지 필드에 대한 getter/setter 추가
+    public String getServerUrl() {
+        return serverUrl;
+    }
+    
+    public String getModelName() {
+        return modelName;
+    }
+    
+    public String getModelVersion() {
+        return modelVersion;
+    }
+    
+    public int getSamplingRate() {
+        return samplingRate;
+    }
+    
+    public long getSequenceId() {
+        return sequenceId;
+    }
+    
+    public void setSequenceId(long sequenceId) {
+        this.sequenceId = sequenceId;
+    }
+
     public TritonVadClient(String serverUrl, int serverPort, String modelName, String modelVersion, int samplingRate) {
         this.serverUrl = "http://" + serverUrl + ":" + serverPort + "/v2/models/" + modelName + "/infer";
         this.modelName = modelName;
         this.modelVersion = modelVersion;
         this.samplingRate = samplingRate;
-        this.client = new OkHttpClient();
         // 현재 타임스탬프를 시퀀스 ID로 사용
         this.sequenceId = System.currentTimeMillis();
     }
@@ -45,6 +85,11 @@ public class TritonVadClient {
      * @throws IOException
      */
     public String processAudioChunk(byte[] audioChunk, boolean sequenceStart, boolean sequenceEnd) throws IOException {
+        // client가 null인 경우 초기화
+        if (client == null) {
+            client = new OkHttpClient();
+        }
+        
         // Base64 인코딩 (AUDIO_CHUNK 입력은 BYTES 타입으로 전달됨)
         String audioChunkB64 = Base64.getEncoder().encodeToString(audioChunk);
         

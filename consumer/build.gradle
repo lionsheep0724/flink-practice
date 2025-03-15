@@ -95,6 +95,10 @@ dependencies {
     testImplementation 'org.apache.flink:flink-core:1.14.6:tests'
     testImplementation 'org.mockito:mockito-inline:4.11.0'
 
+    // Flink
+    implementation 'org.apache.flink:flink-runtime:1.14.6'
+    implementation 'org.apache.flink:flink-clients_2.12:1.14.6'
+
     // gRPC 테스트 의존성 제거
     // testImplementation 'io.grpc:grpc-testing:1.54.1'
 
@@ -112,7 +116,7 @@ tasks.withType(Test) {
 }
 
 bootJar {
-    enabled = false
+    enabled = true
 }
 
 // Protobuf 관련 설정 제거

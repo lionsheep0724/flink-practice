@@ -447,6 +447,7 @@ class VADIterator:
         self.current_sample += window_size_samples
 
         speech_prob = self.model(x, self.sampling_rate).item()
+        
 
         if (speech_prob >= self.threshold) and self.temp_end:
             self.temp_end = 0
@@ -454,20 +455,20 @@ class VADIterator:
         if (speech_prob >= self.threshold) and not self.triggered:
             self.triggered = True
             speech_start = self.current_sample - self.speech_pad_samples
-            return {'start': int(speech_start) if not return_seconds else round(speech_start / self.sampling_rate, 1)}
+            return {'start': int(speech_start) if not return_seconds else round(speech_start / self.sampling_rate, 1)}, speech_prob
 
         if (speech_prob < self.threshold - 0.15) and self.triggered:
             if not self.temp_end:
                 self.temp_end = self.current_sample
             if self.current_sample - self.temp_end < self.min_silence_samples:
-                return None
+                return None, speech_prob
             else:
                 speech_end = self.temp_end + self.speech_pad_samples
                 self.temp_end = 0
                 self.triggered = False
-                return {'end': int(speech_end) if not return_seconds else round(speech_end / self.sampling_rate, 1)}
+                return {'end': int(speech_end) if not return_seconds else round(speech_end / self.sampling_rate, 1)}, speech_prob
 
-        return None
+        return None, speech_prob
 
 
 def collect_chunks(tss: List[dict],

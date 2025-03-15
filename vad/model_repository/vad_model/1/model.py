@@ -74,12 +74,14 @@ class TritonPythonModel:
         if audio_samples < MINIMUM_SAMPLES_FOR_VAD:
             padding_length = MIN_SILENCE_SAMPLES - audio_samples
             padded_audio_tensor = F.pad(audio_tensor, (0, padding_length), "constant", 0)
-            vad_event: Dict[str, float] = self.vad_iterator(padded_audio_tensor, return_seconds=True)
+            vad_event, speech_prob = self.vad_iterator(padded_audio_tensor, return_seconds=True)
+            
             
         else:
-            vad_event: Dict[str, float] = self.vad_iterator(audio_tensor, return_seconds=True)
+            vad_event,speech_prob = self.vad_iterator(audio_tensor, return_seconds=True)
+            
    
-        return vad_event
+        return vad_event, speech_prob
     
     def execute(self, requests):
         """`execute` MUST be implemented in every Python model. `execute`
@@ -134,10 +136,12 @@ class TritonPythonModel:
                 return responses
             else:
                 audio_chunk:bytes = base64.b64decode(pb_utils.get_input_tensor_by_name(request, "AUDIO_CHUNK").as_numpy()[0])
-                vad_event: Dict[str, float] = self.detect_speech(audio_chunk)
+                vad_event, speech_prob = self.detect_speech(audio_chunk)
+                self.logger.log_info(f"SPEECH_PROB : {speech_prob}")
                 if vad_event:
                     event:str = list(vad_event.keys())[0]
                     timestamp:float = list(vad_event.values())[0]
+                    
                    
                 else:
                     self.logger.log_info(f"NOSPEECH!!!!!!!!")

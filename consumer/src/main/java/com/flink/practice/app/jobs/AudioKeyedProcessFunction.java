@@ -55,14 +55,17 @@ public class AudioKeyedProcessFunction extends KeyedProcessFunction<String, Audi
         String response;
         if (isFirst) {
             // 첫 청크: 시작 플래그 true, 종료 플래그 false
+            System.out.println("Process first chunk");
             response = vadClient.processAudioChunk(value.getData(), true, false);
             System.out.println("Sequence response (start): " + response);
         } else if (isLast) {
             // 마지막 청크: 시작 플래그 false, 종료 플래그 true
+            System.out.println("Process last chunk");
             response = vadClient.processAudioChunk(value.getData(), false, true);
             System.out.println("Sequence response (end): " + response);
         } else {
             // 중간 청크: 둘 다 false
+            System.out.println("Process chunk");
             response = vadClient.processAudioChunk(value.getData(), false, false);
             System.out.println("Sequence response (update): " + response);
         }

@@ -5,18 +5,18 @@ import java.io.Serializable;
 public class AudioChunk implements Serializable {
   private String sessionId;
   private byte[] data;
-  private boolean isFirstChunk;
-  private boolean isLastChunk;
+  private boolean firstChunk;
+  private boolean lastChunk;
 
   // 기본 생성자
   public AudioChunk() { }
 
   // 모든 필드를 초기화하는 생성자
-  public AudioChunk(String sessionId, byte[] data, boolean isFirstChunk, boolean isLastChunk) {
+  public AudioChunk(String sessionId, byte[] data, boolean firstChunk, boolean lastChunk) {
     this.sessionId = sessionId;
     this.data = data;
-    this.isFirstChunk = isFirstChunk;
-    this.isLastChunk = isLastChunk;
+    this.firstChunk = firstChunk;
+    this.lastChunk = lastChunk;
   }
 
   // Getter 및 Setter 메서드
@@ -37,11 +37,18 @@ public class AudioChunk implements Serializable {
   }
 
   public boolean isFirstChunk() {
-    return isFirstChunk;
+    return firstChunk;
+  }
+
+  public void setFirstChunk(boolean firstChunk) {
+    this.firstChunk = firstChunk;
   }
 
   public boolean isLastChunk() {
-    return isLastChunk;
+    return lastChunk;
   }
 
+  public void setLastChunk(boolean lastChunk) {
+    this.lastChunk = lastChunk;
+  }
 }

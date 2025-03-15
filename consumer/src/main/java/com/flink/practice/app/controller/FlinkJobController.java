@@ -1,21 +1,21 @@
 package com.flink.practice.app.controller;
 
-import com.flink.practice.app.service.FlinkJobService;
+import com.flink.practice.app.jobs.AudioStreamProcessingJob;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FlinkJobController {
 
-  private final FlinkJobService flinkJobService;
+  private final AudioStreamProcessingJob audioStreamProcessingJob;
 
-  public FlinkJobController(FlinkJobService flinkJobService) {
-    this.flinkJobService = flinkJobService;
+  public FlinkJobController(AudioStreamProcessingJob audioStreamProcessingJob) {
+    this.audioStreamProcessingJob = audioStreamProcessingJob;
   }
 
   @GetMapping("/submitFlinkJob")
   public String submitJob() {
-    flinkJobService.submitJob();
+    audioStreamProcessingJob.submitJob();
     return "Flink Job submitted!";
   }
 }
