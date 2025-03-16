@@ -64,10 +64,10 @@ public class AudioStreamProcessingJob {
           .setDeserializer(KafkaRecordDeserializationSchema.of(new AudioChunkKeyedDeserializationSchema()))
           .build();
 
-      // Kafka Sink 설정
-      KafkaSink<VadResult> kafkaSink = KafkaSink.<VadResult>builder()
+      // Kafka Sink 설정 - STTResult 직렬화 스키마로 변경
+      KafkaSink<STTResult> kafkaSink = KafkaSink.<STTResult>builder()
           .setBootstrapServers(bootstrapServers)
-          .setRecordSerializer(new VadResultSerializationSchema(outputTopic))
+          .setRecordSerializer(new STTResultSerializationSchema(outputTopic))
           .build();
 
       // Triton 기반 VAD 처리 파이프라인 구성
@@ -83,7 +83,7 @@ public class AudioStreamProcessingJob {
           ))
           .sinkTo(kafkaSink);
 
-      env.execute("Audio Stream Processing with Triton VAD and Kafka Sink");
+      env.execute("Audio Stream Processing with Triton VAD and STT");
     } catch( Exception e ){
       e.printStackTrace();
       throw new RuntimeException("Failed to start Flink job", e);

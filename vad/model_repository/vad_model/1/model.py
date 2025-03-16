@@ -138,14 +138,15 @@ class TritonPythonModel:
                 audio_chunk:bytes = base64.b64decode(pb_utils.get_input_tensor_by_name(request, "AUDIO_CHUNK").as_numpy()[0])
                 vad_event, speech_prob = self.detect_speech(audio_chunk)
                 self.logger.log_info(f"SPEECH_PROB : {speech_prob}")
+                self.logger.log_info(f"VAD_EVENT : {vad_event}")
                 if vad_event:
                     event:str = list(vad_event.keys())[0]
                     timestamp:float = list(vad_event.values())[0]
-                    
+                    self.logger.log_info(f"EVENT : {event}")
                    
                 else:
-                    self.logger.log_info(f"NOSPEECH!!!!!!!!")
-                    event:str = "NOSPEECH"
+                    self.logger.log_info(f"NO EVENT")
+                    event:str = "NOEVENT"
                     timestamp:float = -1
                         
     
