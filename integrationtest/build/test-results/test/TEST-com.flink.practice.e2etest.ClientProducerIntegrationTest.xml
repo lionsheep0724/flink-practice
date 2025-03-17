@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.flink.practice.e2etest.ClientProducerIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-16T15:40:24" hostname="DESKTOP-FTHIR2G" time="8.729">
+<testsuite name="com.flink.practice.e2etest.ClientProducerIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-17T14:35:49" hostname="DESKTOP-FTHIR2G" time="10.544">
   <properties/>
-  <testcase name="testClientProducerIntegrationTest()" classname="com.flink.practice.e2etest.ClientProducerIntegrationTest" time="8.729"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="testClientProducerIntegrationTest()" classname="com.flink.practice.e2etest.ClientProducerIntegrationTest" time="10.544"/>
+  <system-out><![CDATA[WAV 파일 크기: 126764 바이트
+총 청크 수: 25
+WebClient 생성 완료, 요청 시작...
+응답 대기 중...
+청크 1/25 생성: 5120 바이트
+응답 수신: SESSION:d0f3ede3-a5a0-439d-81cb-e47aa11168b3
+청크 2/25 생성: 5120 바이트
+청크 3/25 생성: 5120 바이트
+청크 4/25 생성: 5120 바이트
+청크 5/25 생성: 5120 바이트
+청크 6/25 생성: 5120 바이트
+청크 7/25 생성: 5120 바이트
+청크 8/25 생성: 5120 바이트
+청크 9/25 생성: 5120 바이트
+청크 10/25 생성: 5120 바이트
+청크 11/25 생성: 5120 바이트
+청크 12/25 생성: 5120 바이트
+청크 13/25 생성: 5120 바이트
+청크 14/25 생성: 5120 바이트
+청크 15/25 생성: 5120 바이트
+청크 16/25 생성: 5120 바이트
+청크 17/25 생성: 5120 바이트
+청크 18/25 생성: 5120 바이트
+청크 19/25 생성: 5120 바이트
+청크 20/25 생성: 5120 바이트
+청크 21/25 생성: 5120 바이트
+청크 22/25 생성: 5120 바이트
+청크 23/25 생성: 5120 바이트
+청크 24/25 생성: 5120 바이트
+청크 25/25 생성: 3884 바이트
+테스트 완료
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

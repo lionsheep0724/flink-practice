@@ -17,6 +17,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     // Spring Kafka
     implementation 'org.springframework.kafka:spring-kafka'
+    // JSON 파싱을 위한 의존성 추가
+    implementation 'org.json:json:20250107'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.kafka:spring-kafka-test'
 }

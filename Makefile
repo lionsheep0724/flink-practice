@@ -1,4 +1,4 @@
-.PHONY: build-consumer build-producer e2etest all clean
+.PHONY: build-consumer build-producer e2etest test all clean
 
 # 운영체제 감지
 ifeq ($(OS),Windows_NT)
@@ -18,4 +18,8 @@ build-producer:
 	cd producer && docker build -t producer:0.0.0 --no-cache .
 
 e2etest:
+	$(GRADLEW) :integrationtest:test --rerun-tasks
+
+# test 타겟 추가 - e2etest와 동일한 명령 실행
+test:
 	$(GRADLEW) :integrationtest:test --rerun-tasks
